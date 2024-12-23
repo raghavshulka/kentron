@@ -10,28 +10,6 @@ import { SkeletonThree } from "./skeletons/third";
 
 export const Features = () => {
   const features = [
-    // {
-    //   title: "Generate images with text",
-    //   description:
-    //     "Generate images from a text prompt, a video, or a video segment in bulk at the speed of light.",
-    //   skeleton: <SkeletonOne />,
-    //   className:
-    //     "col-span-1 md:col-span-4 border-b border-r dark:border-neutral-800",
-    // },
-    // {
-    //   title: "Create stupid simple chatbots",
-    //   description:
-    //     "Create Chatbots with a single button click. Customize as per your requirements and the AI will take care of the rest.",
-    //   skeleton: <SkeletonTwo />,
-    //   className: "border-b col-span-1 md:col-span-2 dark:border-neutral-800",
-    // },
-    // {
-    //   title: "We support every single LLM",
-    //   description:
-    //     "Whether it's OpenAI, GroQ or Your Mom's Basement LLM, we support everything.",
-    //   skeleton: <SkeletonThree />,
-    //   className: "col-span-1 md:col-span-3 border-r dark:border-neutral-800",
-    // },
     {
       title: "All in One eDiscovery and Compliance Hub",
       description:
@@ -41,24 +19,24 @@ export const Features = () => {
     },
   ];
   return (
-    <div className="md:block hidden relative z-20 py-10 md:py-20">
-      <Heading as="h2" className=" font-sf-pro md:text-start ">
-        Packed with industry leading unmatched features
-      </Heading>
-      <Subheading className="md:text-start font-sf-pro text-black ">
-        Unleash the power of automated workflows, advanced analytics, and
-        intuitive user experiences to stay ahead in an ever-evolving regulatory
-        landscape
-      </Subheading>
-
-      <div className=" flex flex-row justify-center mt-12">
-        <div className="relative w-full md:max-w-[900px]">
-          <div className="flex flex-row justify-center  mt-12 ">
+    <div className="relative  mx-[14px]  mt-[90px] md:mt-[160px] md:ml-[80px]">
+    <h2 className="font-bold w-[400px] text-[29px] leading-[34px] md:text-[64px] md:leading-[76px] mb-[16px] text-center md:text-start  md:w-[960px]">
+      Packed with industry leading<br /> unmatched features
+    </h2>
+    <p className="mb-[40px] w-[400px] md:mb-[72px] text-[14px] leading-[16px] md:text-[24px] md:w-[960px] md:leading-[28px] text-center md:text-start text-[#222222] font-[400] tracking-[0.02em] font-sf-pro max-w-full md:max-w-[960px]">
+      Unleash the power of automated workflows, advanced analytics, and
+      intuitive user experiences to stay ahead in an ever-evolving regulatory
+      landscape
+    </p>
+  
+      <div className="flex flex-row justify-center mt-12">
+        <div className="relative w-[350px] md:w-[1300px]">
+          <div className="flex flex-row justify-center mt-12">
             {features.map((feature) => (
               <FeatureCard key={feature.title} className={feature.className}>
                 <FeatureTitle>{feature.title}</FeatureTitle>
                 <FeatureDescription>{feature.description}</FeatureDescription>
-                <div className=" h-full w-full">{feature.skeleton}</div>
+                <div className="h-full w-full">{feature.skeleton}</div>
               </FeatureCard>
             ))}
           </div>
@@ -114,15 +92,15 @@ const FeatureCard = ({
 
 const FeatureTitle = ({ children }: { children?: React.ReactNode }) => {
   return (
-    <Heading as="h3" size="sm" className="text-left">
+    <div  className="md:text-left text-[16px] md:text-2xl font-semibold text-gray-900 mt-4">
       {children}
-    </Heading>
+    </div>
   );
 };
 
 const FeatureDescription = ({ children }: { children?: React.ReactNode }) => {
   return (
-    <Subheading className="text-left max-w-sm mx-0 md:text-sm my-2">
+    <Subheading className="text-left max-w-xs mx-0 md:text-base my-2 text-[12px] text-gray-600">
       {children}
     </Subheading>
   );

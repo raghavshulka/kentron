@@ -1,5 +1,3 @@
-
-
 const benefits = [
   {
     icon: <img src="/search-status.svg" alt="icon" />,
@@ -41,20 +39,25 @@ const benefits = [
 
 export default function KeyBenefits() {
   return (
-    <div className=" relative py-16 px-4 md:px-6 lg:px-8">
-      <h1 className="text-4xl font-bold mb-16">Key Benefits</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
+    <div className=" relative pt-[40px] md:mt-[200px] mx-[30px] md:mx-[80px]  lg:px-8">
+      <h1 className="font-bold  md:text-[64px] md:leading-[76px]  text-[29px] md:text-left leading-[34px] md:mb-[60px]  mb-[40px] text-center">
+        Key Benefits
+      </h1>
+      <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-x-10 md:gap-x-[0px] gap-y-[32px] md:gap-y-[80px]">
         {benefits.map((key, index) => (
-          <div key={index} className="flex flex-col">
-            <div className="mb-4 p-2 w-12 h-12 flex items-center justify-center rounded-lg bg-gray-100">
-              {key.icon }
+          <div key={index} className="flex md:w-[380px] flex-col">
+            <div className="mb-4 p-2 w-12 h-12 flex items-center justify-center rounded-lg ">
+              {key.icon}
             </div>
-            <h3 className="text-xl font-semibold mb-2">{key.title}</h3>
-            <p className="text-gray-600 leading-relaxed">{key.description}</p>
+            <h3 className="text-[16px] leading-[19px] md:text-[18px] md:leading-[21px] font-sf-pro font-[700] mb-2">
+              {key.title}
+            </h3>
+            <p className=" text-[14px] leading-[16px] md:text-[16px] md:leading-[29px] font-[400]">
+              {key.description}
+            </p>
           </div>
         ))}
       </div>
     </div>
   );
 }
-

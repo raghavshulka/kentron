@@ -8,7 +8,7 @@ export function BentoGrid({ className, children, ...props }: BentoGridProps) {
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-3   md:max-w-7xl mx-auto ",
+        "grid grid-cols-1 md:grid-cols-3   md:max-w-9xl mx-auto ",
         className
       )}
       {...props}
