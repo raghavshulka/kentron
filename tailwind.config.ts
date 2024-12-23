@@ -13,12 +13,9 @@ const config: Config = {
   darkMode: ["class", "class"],
   theme: {
   	extend: {
-  		fontFamily: {
-  			'sf-pro': [
-  				'SF Pro Display"',
-  				'sans-serif'
-  			]
-  		},
+		fontFamily: {
+			'sf-pro': ['"SF Pro Display"', 'sans-serif'],
+		  },
   		backgroundImage: {
   			'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
   			'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'

@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
-import { BackgroundGradient } from "./background-gradient";
 import { Button } from "./button";
 
 export default function GraphFeatures() {
@@ -81,7 +80,7 @@ export default function GraphFeatures() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {engine.features.map((feature, featureIndex) => (
-              <Card className="p-6 h-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+              <Card className="p-6 h-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 " key={featureIndex}>
                 <p className=" text-black md:text-[24px] md:leading-[28px]  text-[16px] leading-[19px]  font-medium font-sf-pro px-[10px] py-[24px] md:px-[18px]  ">
                   {feature.title}
                 </p>
