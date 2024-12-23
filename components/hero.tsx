@@ -23,14 +23,19 @@ export const Hero = () => {
   };
   return (
     <>
-      <video
-        className="absolute h-[852px] w-full object-cover md:object-left"
-        src={videoLink}
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
+   <video
+  className="absolute w-full h-screen object-cover"
+  src={videoLink}
+  autoPlay
+  loop
+  muted
+  playsInline
+  style={{
+    maskImage: "linear-gradient(to bottom, black 80%, transparent 100%)",
+    WebkitMaskImage: "linear-gradient(to bottom, black 80%, transparent 100%)",
+  }}
+/>
+
       <div className="flex flex-col min-h-screen pt-20 md:pt-40 relative overflow-hidden">
         {/* Video Background */}
         <motion.div
@@ -125,7 +130,7 @@ export const Hero = () => {
           <HiArrowRight className="text-muted group-hover:translate-x-1 stroke-[1px] h-3 w-3 transition-transform duration-200 dark:text-muted-dark" />
         </Button> */}
         </motion.div>
-        <div className="border border-l-[4px] border-r-[4px] border-t-[4px] border-[#25437333] bg-neutral-100 dark:bg-neutral-800 dark:border-neutral-700 rounded-lg mt-20 relative">
+        <div className="border md:mt-[163px] border-l-[4px] border-r-[4px] border-t-[4px] border-[#25437333] bg-neutral-100 dark:bg-neutral-800 dark:border-neutral-700 rounded-lg mt-20 relative">
           <div className="absolute inset-x-0 bottom-0 h-40 w-full bg-gradient-to-b from-transparent via-white to-white dark:via-black/50 dark:to-black scale-[1.1] pointer-events-none" />
           <div className="bg-white dark:bg-black dark:border-neutral-700 border border-neutral-200 rounded-[24px]">
             <Image

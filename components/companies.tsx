@@ -1,28 +1,25 @@
 import React from "react";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
-import { CircleFlowGrid } from "@/components/circleFlowGrid";
+import { cn } from "@/lib/utils";
 
 export function Companies() {
   return (
-    <div className="relative py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto ">
-        <div className="text-center md:text-left md:mb-[72px] mb-12">
-          <h2 className="font-sf-pro text-[#222222] text-3xl sm:text-4xl md:text-5xl leading-tight tracking-tight font-bold mb-4">
+    <div className="relative py-16 px-4">
+      <div className="mx-auto">
+        <div className="text-center md:text-left mb-12">
+          <h2 className=" font-sf-pro text-[#222222] text-4xl md:text-5xl font-bold mb-4">
             Unified Ingestion Engine
           </h2>
-          <p className="font-sf-pro text-lg sm:text-xl md:text-2xl text-[#222222] tracking-wide">
+          <p className=" font-sf-pro text-xl md:text-2xl text-[#222222]">
             Efficiently Ingest Content with Precision at Enterprise Scale
           </p>
         </div>
-        <BentoGrid className="font-sf-pro text-black   ">
+        <BentoGrid className="">
           {items.map((item, i) => (
             <BentoGridItem
               key={i}
               description={item.description}
-              className={cn(
-                item.className,
-                "relative overflow-hidden"
-              )}
+              className={item.className}
               header={item.header}
             />
           ))}
@@ -34,54 +31,55 @@ export function Companies() {
 
 const items = [
   {
-    description:
-      "Prebuilt connectors to commonly used enterprise data repositories.",
-    header: <CircleFlowGrid className="w-full h-full" />,
-    className: "md:col-span-2",
+    description: "Prebuilt connectors to commonly used enterprise data repositories",
+    header: (
+      <div className="flex items-center justify-center w-full h-full">
+        <img
+          src="/Frame18.svg"
+          alt="Connectors"
+          className="w-full h-full object-contain p-6"
+        />
+      </div>
+    ),
+    className: "md:col-span-2 h-[320px]",
   },
   {
-    description: "Continuous ingestion of millions of pages.",
+    description: "Continuous ingestion of millions of pages",
     header: (
-      <div className="relative w-full h-full flex items-center justify-center">
+      <div className="flex items-center justify-center w-full h-full">
         <img
           src="/Group1.svg"
-          alt="Group1 Illustration"
-          className="w-3/4 h-3/4 object-contain"
+          alt="Ingestion"
+          className="w-full h-full object-contain p-6"
         />
       </div>
     ),
-    className: "md:col-span-1",
+    className: "md:col-span-1 h-[320px]",
   },
   {
-    description: "Smart data chunking for optimal processing.",
+    description: "Smart data chunking",
     header: (
-      <div className="relative w-full h-full flex items-center justify-center">
+      <div className="flex items-center justify-center w-full h-full">
         <img
           src="/Group2.svg"
-          alt="Group2 Illustration"
-          className="w-3/4 h-3/4 object-contain"
+          alt="Chunking"
+          className="w-full h-full object-contain p-6"
         />
       </div>
     ),
-    className: "md:col-span-1",
+    className: "md:col-span-1 h-[320px]",
   },
   {
-    description:
-      "Accurate reading and analysis of multimodal content — text, images, audio, and video",
+    description: "Accurate reading and analysis of multimodal content — text, images, audio, and video",
     header: (
-      <div className="relative w-full h-full flex items-center justify-center">
+      <div className="flex items-center justify-center w-full h-full">
         <img
           src="/Frame14.svg"
-          alt="Group14 Illustration"
-          className="w-5/6 h-5/6 object-contain"
+          alt="Multimodal"
+          className="w-full h-full object-contain p-6"
         />
       </div>
     ),
-    className: "md:col-span-2",
+    className: "md:col-span-2 h-[320px]",
   },
 ];
-
-function cn(...classes: (string | undefined)[]) {
-  return classes.filter(Boolean).join(" ");
-}
-

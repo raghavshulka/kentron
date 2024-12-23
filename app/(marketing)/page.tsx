@@ -13,9 +13,6 @@ import KeyBenefits from "@/components/Keyfont";
 export default function Home() {
   return (
     <div className="relative">
-      <div className="absolute inset-0 h-full w-full overflow-hidden ">
-        <Background />
-      </div>
       <Container className="flex min-h-screen flex-col items-center justify-between ">
         <Hero />
         <Companies />
@@ -26,9 +23,9 @@ export default function Home() {
         {/* <Testimonials /> */}
       </Container>
       <div className="relative">
-        <div className="absolute inset-0 h-full w-full overflow-hidden">
+        {/* <div className="absolute inset-0 h-full w-full overflow-hidden">
           <Background />
-        </div>
+        </div> */}
         {/* <CTA /> */}
       </div>
     </div>

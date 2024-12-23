@@ -1,33 +1,49 @@
 "use client";
 import React, { useState } from "react";
 
-export function NavBar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDropdownOpen1, setIsDropdownOpen1] = useState(false);
-  const [isDropdownOpen2, setIsDropdownOpen2] = useState(false);
-  const [isDropdownOpen3, setIsDropdownOpen3] = useState(false);
+interface DropdownConfig {
+  key: string;
+  label: string;
+  items: string[];
+}
 
-  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
+export function NavBar() {
+  const [dropdowns, setDropdowns] = useState<Record<string, boolean>>({
+    product: false,
+    solution: false,
+    platform: false,
+  });
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleDropdown = (key: string) => {
+    setDropdowns((prev) => ({
+      ...prev,
+      [key]: !prev[key],
+    }));
+  };
+
+  const closeAllDropdowns = () => {
+    setDropdowns({ product: false, solution: false, platform: false });
+  };
+
+  const dropdownConfigs: DropdownConfig[] = [
+    { key: "product", label: "Product", items: ["Overview", "Features"] },
+    { key: "solution", label: "Solution", items: ["Use Cases", "Integrations"] },
+    { key: "platform", label: "Platform", items: ["Pricing", "Support"] },
+  ];
 
   return (
-    <nav className="  relative dark:bg-gray-900 dark:border-gray-700">
-      <div className=" mx-[50px] flex flex-wrap items-center justify-between  p-4">
+    <nav className="absolute top-0 left-0 w-full z-50 bg-transparent">
+      <div className="mx-4 md:mx-[50px] flex flex-wrap items-center justify-between p-4">
         {/* Logo */}
         <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img
-            src="https://flowbite.com/docs/images/logo.svg"
-            className="h-8"
-            alt="Logo"
-          />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            Kentron
-          </span>
+          <img src="/vector.svg" className="h-8" alt="Logo" />
         </a>
 
         {/* Mobile Menu Button */}
         <button
-          onClick={toggleMenu}
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          onClick={() => setIsMenuOpen((prev) => !prev)}
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600"
         >
           <span className="sr-only">Open main menu</span>
           <svg
@@ -53,147 +69,52 @@ export function NavBar() {
             isMenuOpen ? "block" : "hidden"
           } w-full md:block md:w-auto`}
         >
-          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-            {/* Dropdown 1 */}
-            <li>
-              <button
-                onClick={() => setIsDropdownOpen1((prev) => !prev)}
-                className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
-              >
-                Product
-                <svg
-                  className="w-2.5 h-2.5 ms-2.5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 10 6"
+          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+            {/* Dropdowns */}
+            {dropdownConfigs.map(({ key, label, items }) => (
+              <li key={key} className="relative">
+                <button
+                  onClick={() => toggleDropdown(key)}
+                  className="flex items-center justify-between w-full py-2 px-3 text-white rounded hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-400 md:p-0 md:w-auto"
                 >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="m1 1 4 4 4-4"
-                  />
-                </svg>
-              </button>
-              {isDropdownOpen1 && (
-                <div className="z-10 font-normal bg-white rounded-lg shadow w-44 dark:bg-gray-700">
-                  <ul className="py-2 text-sm text-gray-700 dark:text-gray-400">
-                    <li>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        Overview
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        Features
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              )}
-            </li>
-
-            {/* Dropdown 2 */}
-            <li>
-              <button
-                onClick={() => setIsDropdownOpen2((prev) => !prev)}
-                className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
-              >
-                Solution
-                <svg
-                  className="w-2.5 h-2.5 ms-2.5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 10 6"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="m1 1 4 4 4-4"
-                  />
-                </svg>
-              </button>
-              {isDropdownOpen2 && (
-                <div className="z-10 font-normal bg-white rounded-lg shadow w-44 dark:bg-gray-700">
-                  <ul className="py-2 text-sm text-gray-700 dark:text-gray-400">
-                    <li>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        Use Cases
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        Industries
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              )}
-            </li>
-
-            {/* Dropdown 3 */}
-            <li>
-              <button
-                onClick={() => setIsDropdownOpen3((prev) => !prev)}
-                className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
-              >
-                Platform
-                <svg
-                  className="w-2.5 h-2.5 ms-2.5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 10 6"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="m1 1 4 4 4-4"
-                  />
-                </svg>
-              </button>
-              {isDropdownOpen3 && (
-                <div className="z-10 font-normal bg-white rounded-lg shadow w-44 dark:bg-gray-700">
-                  <ul className="py-2 text-sm text-gray-700 dark:text-gray-400">
-                    <li>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        Integrations
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        Documentation
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              )}
-            </li>
+                  {label}
+                  <svg
+                    className="w-2.5 h-2.5 ms-2.5"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+                {dropdowns[key] && (
+                  <div
+                    className="absolute top-full left-0 z-10 font-normal bg-gray-800 rounded-lg shadow w-44"
+                    onMouseLeave={closeAllDropdowns}
+                  >
+                    <ul className="py-2 text-sm text-white">
+                      {items.map((item) => (
+                        <li key={item}>
+                          <a
+                            href="#"
+                            className="block px-4 py-2 hover:bg-gray-700"
+                          >
+                            {item}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </li>
+            ))}
           </ul>
         </div>
       </div>
