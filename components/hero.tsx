@@ -41,17 +41,9 @@ export const Hero = () => {
       />
       <GridLineVertical
         className="absolute h-full blur-[1px] right-[12px] md:right-[41px]"
-        style={{
-          width: "1px",
-          borderLeft: "0.5px dashed rgba(37, 67, 115, 0.3)",
-        }}
       />
       <GridLineVertical
         className="absolute h-full blur-[1px] left-[12px] md:left-[41px]"
-        style={{
-          width: "1px",
-          borderLeft: "0.5px dashed rgba(37, 67, 115, 0.3)",
-        }}
       />
       <div className="flex flex-col min-h-screen pt-20 md:pt-[120px] relative overflow-hidden px-4 md:px-0">
         <motion.h1

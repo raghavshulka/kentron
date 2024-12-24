@@ -14,21 +14,29 @@ export function NavBar() {
     platform: false,
   });
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [expandedMobile, setExpandedMobile] = useState<string | null>(null);
 
   const toggleDropdown = (key: string) => {
-    setDropdowns((prev) => ({
-      ...prev,
-      [key]: !prev[key],
-    }));
+    // On desktop: toggle dropdown
+    // On mobile: toggle expansion
+    if (window.innerWidth >= 768) {
+      setDropdowns((prev) => ({
+        ...prev,
+        [key]: !prev[key],
+      }));
+    } else {
+      setExpandedMobile(expandedMobile === key ? null : key);
+    }
   };
 
   const closeAllDropdowns = () => {
     setDropdowns({ product: false, solution: false, platform: false });
+    setExpandedMobile(null);
   };
 
   const dropdownConfigs: DropdownConfig[] = [
-    { key: "PRODUCT", label: "PRODUCT", items: ["Overview", "Features"] },
-    { key: "SOLUTIN", label: "SOLUTION", items: ["Use Cases", "Integrations"] },
+    { key: "product", label: "PRODUCT", items: ["Overview", "Features"] },
+    { key: "solution", label: "SOLUTION", items: ["Use Cases", "Integrations"] },
     { key: "platform", label: "PLATFORM", items: ["Pricing", "Support"] },
   ];
 
@@ -69,17 +77,19 @@ export function NavBar() {
             isMenuOpen ? "block" : "hidden"
           } w-full md:block md:w-auto`}
         >
-          <ul className="flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
-            {/* Dropdowns */}
+          <ul className="flex flex-col p-4 md:p-0 mt-4 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0
+            bg-white/5 backdrop-blur-xl border border-white/10 md:bg-transparent md:backdrop-filter-none md:border-0">
             {dropdownConfigs.map(({ key, label, items }) => (
-              <li key={key} className="relative gap-[40px] ">
+              <li key={key} className="relative">
                 <button
                   onClick={() => toggleDropdown(key)}
-                  className="flex items-center md:font-sf-pro  md:text-[16px]   justify-between w-full py-2 px-3 text-white rounded hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-400 md:p-0 md:w-auto"
+                  className="flex items-center md:font-sf-pro md:text-[16px] justify-between w-full py-2 px-3 text-white rounded hover:bg-white/10 md:hover:bg-transparent md:border-0 md:hover:text-blue-400 md:p-0 md:w-auto transition-colors duration-200"
                 >
                   {label}
                   <svg
-                    className="w-[17px] h-[17px] ms-2.5"
+                    className={`w-[17px] h-[17px] ms-2.5 transition-transform duration-200 ${
+                      (expandedMobile === key || dropdowns[key]) ? 'rotate-180' : ''
+                    }`}
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -94,23 +104,40 @@ export function NavBar() {
                     />
                   </svg>
                 </button>
-                {dropdowns[key] && (
+                
+                {/* Desktop Dropdown */}
+                {dropdowns[key] && window.innerWidth >= 768 && (
                   <div
-                    className="absolute top-full left-0 z-10 font-normal bg-gray-800 rounded-lg shadow w-44"
+                    className="absolute top-full left-0 z-10 font-normal bg-white/5 backdrop-blur-xl rounded-lg shadow-lg w-44 border border-white/10"
                     onMouseLeave={closeAllDropdowns}
                   >
-                    <ul className="py-2 text-sm text-white">
+                    <ul className="py-2 text-sm text-white/90">
                       {items.map((item) => (
                         <li key={item}>
                           <a
                             href="#"
-                            className="block px-4 py-2 hover:bg-gray-700"
+                            className="block px-4 py-2 hover:bg-white/10 hover:backdrop-blur-xl transition-all duration-200 ease-in-out"
                           >
                             {item}
                           </a>
                         </li>
                       ))}
                     </ul>
+                  </div>
+                )}
+
+                {/* Mobile Expanded Menu */}
+                {expandedMobile === key && window.innerWidth < 768 && (
+                  <div className="mt-2 pl-4 border-l border-white/10">
+                    {items.map((item) => (
+                      <a
+                        key={item}
+                        href="#"
+                        className="block py-2 text-white/90 hover:text-white transition-colors duration-200"
+                      >
+                        {item}
+                      </a>
+                    ))}
                   </div>
                 )}
               </li>

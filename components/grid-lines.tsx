@@ -17,14 +17,22 @@ export const GridLineHorizontal = ({ ...props }) => {
 };
 
 export const GridLineVertical = ({ ...props }) => {
+  const baseStyles = {
+    width: "1px",
+    backgroundSize: "1px 32px",
+    backgroundImage: "linear-gradient(to bottom, rgba(37, 67, 115, 0.3) 10px, transparent 22px)",
+  };
+
   return (
     <>
       <div
-        className={cn(styles.gridLineVerticalDark, "hidden dark:block ")}
+        className={cn(styles.gridLineVerticalDark, "hidden dark:block")}
+        style={{ ...baseStyles, ...props.style }}
         {...props}
       />
       <div
-        className={cn(styles.gridLineVertical, "block dark:hidden ")}
+        className={cn(styles.gridLineVertical, "block dark:hidden")}
+        style={{ ...baseStyles, ...props.style }}
         {...props}
       />
     </>

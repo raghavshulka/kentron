@@ -40,6 +40,8 @@ const items = [
           src="/Frame18.svg"
           alt="Connectors"
           className="w-full h-full object-contain md:p-6"
+          loading="lazy"
+          decoding="async"
         />
       </div>
     ),
