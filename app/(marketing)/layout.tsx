@@ -20,14 +20,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={cn("min-h-screen antialiased", GeistSans.className)}>
-        <main>
+        <main className=" scroll-smooth ">
           <NavBar />
           {children}
           <Footer />
         </main>
-      </body>
-    </html>
   );
 }
