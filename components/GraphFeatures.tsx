@@ -63,7 +63,7 @@ export default function GraphFeatures() {
   ];
 
   return (
-    <div className=" container mx-auto px-4 mt-[50px]">
+    <div className=" container mx-auto px-4 md:px-[100px] mt-[50px]">
       {engines.map((engine, index) => (
         <section key={index} className="space-y-[24px]">
           <motion.div

@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 
 interface DropdownConfig {
   key: string;
@@ -45,7 +46,7 @@ export function NavBar() {
       <div className="mx-[20px] mt-[40px] md:mt-[47px] flex flex-wrap items-center justify-between  md:mx-[40px]">
         {/* Logo */}
         <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="/vector.svg" className="h-8" alt="Logo" />
+          <Image src="/vector.svg" className="h-8" alt="Logo" width={160} height={37} />
         </a>
 
         {/* Mobile Menu Button */}
