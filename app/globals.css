@@ -92,3 +92,27 @@ html {
     @apply bg-background text-foreground;
   }
 }
+
+.gridLineHorizontal {
+  position: absolute;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.gridLineHorizontalDark {
+  position: absolute;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.gridLineVertical {
+  position: absolute;
+  width: 1px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.gridLineVerticalDark {
+  position: absolute;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
