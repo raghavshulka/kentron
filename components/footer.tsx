@@ -34,7 +34,7 @@ export default function Footer() {
           <div>
             <Link href="/" className="flex items-center">
               <Image
-                src="/placeholder.svg?height=40&width=120"
+                src="/Frame20.svg"
                 alt="Kentron"
                 width={120}
                 height={40}

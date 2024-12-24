@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Button } from "./button";
+import { GridLineHorizontal } from "./grid-lines";
 
 export default function GraphFeatures() {
   const engines = [
@@ -62,7 +63,7 @@ export default function GraphFeatures() {
   ];
 
   return (
-    <div className="relative container mx-auto px-4 mt-[50px] ">
+    <div className=" container mx-auto px-4 mt-[50px]">
       {engines.map((engine, index) => (
         <section key={index} className="space-y-[24px]">
           <motion.div
@@ -78,10 +79,22 @@ export default function GraphFeatures() {
             </p>
           </motion.div>
 
-          <div className="grid  grid-cols-1 md:grid-cols-3 ">
+          {/* GridLine between title and features */}
+          <div className="relative">
+            <GridLineHorizontal
+              style={{
+                position: "absolute",
+                top: "0", // This places the line just below the description
+                left: "-10%",
+                width: "120%",
+              }}
+            />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3">
             {engine.features.map((feature, featureIndex) => (
               <Card
-                className="p-6 h-full  supports-[backdrop-filter]:bg-background/60 border "
+                className="p-6 h-full supports-[backdrop-filter]:bg-background/60 border-none shadow-none"
                 key={featureIndex}
               >
                 <p className="text-black md:text-[24px] md:leading-[28px] text-[16px] leading-[19px] font-medium font-sf-pro px-[10px] py-[24px] md:px-[18px]">
@@ -93,10 +106,22 @@ export default function GraphFeatures() {
               </Card>
             ))}
           </div>
+
+          {/*  bottom */}
+          <div className="relative ">
+            <GridLineHorizontal
+              style={{
+                position: "absolute",
+                bottom: "0px", // Adjusted for better alignment
+                left: "-10%",
+                width: "120%",
+              }}
+            />
+          </div>
         </section>
       ))}
 
-      <div className="mx-auto md:mt-[120px] px-[28px] mt-[49px]  mb-[30px]">
+      <div className="mx-auto md:mt-[120px] px-[28px] mt-[49px] mb-[30px]">
         <h2 className="max-w-[336px] md:max-w-[1150px] md:leading-[39px] md:tracking-[0.02em] text-center md:text-left font-sf-pro text-[#222222] md:text-[30px] text-[24px] leading-[30px] font-[700]">
           Our product is best suited
           <span className="text-gray-400 font-[500]">
@@ -119,6 +144,15 @@ export default function GraphFeatures() {
           </button>
         ))}
       </div>
+      <div className="relative mt-8 md:bottom-[-120px] bottom-[-4px] ">
+            <GridLineHorizontal
+              style={{
+                position: "absolute",
+                left: "-10%",
+                width: "120%",
+              }}
+            />
+          </div>
     </div>
   );
 }

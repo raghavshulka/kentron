@@ -1,3 +1,5 @@
+import { GridLineHorizontal } from "./grid-lines";
+
 const benefits = [
   {
     icon: <img src="/search-status.svg" alt="icon" />,
@@ -57,6 +59,15 @@ export default function KeyBenefits() {
             </p>
           </div>
         ))}
+      </div>
+      <div className="relative  bottom-[-40px]  md:bottom-[-80px] ">
+        <GridLineHorizontal
+          style={{
+            position: "absolute",
+            left: "-10%",
+            width: "120%",
+          }}
+        />
       </div>
     </div>
   );
