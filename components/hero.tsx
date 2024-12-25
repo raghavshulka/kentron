@@ -80,12 +80,12 @@ export const Hero = () => {
             <HiArrowRight className="ml-3 stroke-[1px] h-6 w-6 md:h-[24px] md:w-[24px] text-white transition-transform duration-200" />
           </Button>
         </motion.div>
-        <div className="border md:mx-[40px] md:rounded-[20px] mt-[90px] md:mt-[163px] border-l-[4px] border-r-[4px] md:border-l-[8px] md:border-r-[8px] md:border-t-[8px] border-t-[4px] border-[#25437333] bg-neutral-100 dark:bg-neutral-800 dark:border-neutral-700 rounded-[8px] relative">
+        {/* <div className="border md:mx-[40px] md:rounded-[20px] mt-[90px] md:mt-[163px] border-l-[4px] border-r-[4px] md:border-l-[8px] md:border-r-[8px] md:border-t-[8px] border-t-[4px] border-[#25437333] bg-neutral-100 dark:bg-neutral-800 dark:border-neutral-700 rounded-[8px] relative">
           <div className="absolute bottom-0 h-[95px]  md:h-[200px] md:w-full w-[360px] bg-gradient-to-b from-transparent via-white to-white dark:via-black/50 dark:to-black scale-[1.1] pointer-events-none"></div>
           <div className="bg-white dark:bg-black dark:border-neutral-700 border border-neutral-200 rounded-[6px] md:rounded-[24px] overflow-hidden">
             <Image src="/main.png" alt="header" width={1920} height={1080} />
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );
