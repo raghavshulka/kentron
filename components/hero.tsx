@@ -39,12 +39,8 @@ export const Hero = () => {
             "linear-gradient(to bottom, black 80%, transparent 100%)",
         }}
       />
-      <GridLineVertical
-        className="absolute h-full blur-[1px] right-[12px] md:right-[41px] opacity-70 md:opacity-80"
-      />
-      <GridLineVertical
-        className="absolute h-full blur-[1px] left-[12px] md:left-[41px] opacity-70 md:opacity-80"
-      />
+      <GridLineVertical className="absolute h-full blur-[1px] right-[12px] md:right-[41px] opacity-70 md:opacity-80" />
+      <GridLineVertical className="absolute h-full blur-[1px] left-[12px] md:left-[41px] opacity-70 md:opacity-80" />
       <div className="flex flex-col min-h-screen pt-20 md:pt-[120px] relative overflow-hidden px-4 md:px-0">
         <motion.h1
           initial={{ y: 40, opacity: 0 }}
@@ -53,7 +49,7 @@ export const Hero = () => {
           className="text-[44px] mt-[100px] font-bold leading-[52.51px] max-w-6xl text-center md:text-left md:mx-[20px] lg:mx-[80px] md:text-[72px] md:leading-[85px] relative z-10"
         >
           <Balancer className="font-sf-pro text-white tracking-[0.02em]">
-          AI-driven eDiscovery & Compliance
+            AI-driven eDiscovery & Compliance
           </Balancer>
         </motion.h1>
 
@@ -84,16 +80,10 @@ export const Hero = () => {
             <HiArrowRight className="ml-3 stroke-[1px] h-6 w-6 md:h-[24px] md:w-[24px] text-white transition-transform duration-200" />
           </Button>
         </motion.div>
-        <div className="  border mx-[16px] md:mx-[40px]  md:rounded-[20px] mt-[86px] md:mt-[163px] border-l-[4px] border-r-[4px] md:border-l-[8px] md:border-r-[8px] md:border-t-[8px] border-t-[4px] border-[#25437333] bg-neutral-100 dark:bg-neutral-800 dark:border-neutral-700 rounded-[6px]  relative">
-        <div className="absolute inset-x-0 bottom-0 h-[100px] md:h-[200px] md:w-full  w-[350px]  bg-gradient-to-b from-transparent via-white to-white dark:via-black/50 dark:to-black scale-[1.1] pointer-events-none"></div>
-          <div className="bg-white dark:bg-black dark:border-neutral-700 border border-neutral-200 rounded-[24px] overflow-hidden ">
-
-            <Image
-              src="/dashboard-screen.png"
-              alt="header"
-              width={1920}
-              height={1080}
-            />
+        <div className="border md:mx-[40px] md:rounded-[20px] mt-[90px] md:mt-[163px] border-l-[4px] border-r-[4px] md:border-l-[8px] md:border-r-[8px] md:border-t-[8px] border-t-[4px] border-[#25437333] bg-neutral-100 dark:bg-neutral-800 dark:border-neutral-700 rounded-[8px] relative">
+          <div className="absolute bottom-0 h-[95px]  md:h-[200px] md:w-full w-[360px] bg-gradient-to-b from-transparent via-white to-white dark:via-black/50 dark:to-black scale-[1.1] pointer-events-none"></div>
+          <div className="bg-white dark:bg-black dark:border-neutral-700 border border-neutral-200 rounded-[6px] md:rounded-[24px] overflow-hidden">
+            <Image src="/main.png" alt="header" width={1920} height={1080} />
           </div>
         </div>
       </div>
