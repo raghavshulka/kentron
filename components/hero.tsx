@@ -40,10 +40,10 @@ export const Hero = () => {
         }}
       />
       <GridLineVertical
-        className="absolute h-full blur-[1px] right-[12px] md:right-[41px]"
+        className="absolute h-full blur-[1px] right-[12px] md:right-[41px] opacity-70 md:opacity-80"
       />
       <GridLineVertical
-        className="absolute h-full blur-[1px] left-[12px] md:left-[41px]"
+        className="absolute h-full blur-[1px] left-[12px] md:left-[41px] opacity-70 md:opacity-80"
       />
       <div className="flex flex-col min-h-screen pt-20 md:pt-[120px] relative overflow-hidden px-4 md:px-0">
         <motion.h1
@@ -53,7 +53,7 @@ export const Hero = () => {
           className="text-[44px] mt-[100px] font-bold leading-[52.51px] max-w-6xl text-center md:text-left md:mx-[20px] lg:mx-[80px] md:text-[72px] md:leading-[85px] relative z-10"
         >
           <Balancer className="font-sf-pro text-white tracking-[0.02em]">
-            Lighting fast AI-driven eDiscovery & Compliance
+          AI-driven eDiscovery & Compliance
           </Balancer>
         </motion.h1>
 

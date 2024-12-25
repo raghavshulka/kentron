@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-        <main className=" scroll-smooth ">
+        <main className="scroll-smooth overflow-hidden">
           <NavBar />
           {children}
           <Footer />

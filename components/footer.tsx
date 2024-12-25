@@ -29,107 +29,118 @@ export default function Footer() {
 
   return (
     <footer className="bg-white border-t">
-      <div className="mx-auto max-w-7xl px-6 py-12 md:flex md:items-start md:justify-between lg:px-8">
-        <div className="space-y-8">
-          <div>
-            <Link href="/" className="flex items-center">
-              <Image
-                src="/Frame20.svg"
-                alt="Kentron"
-                width={120}
-                height={40}
-                className="h-10 w-auto"
-              />
-            </Link>
-          </div>
-          <div className="space-y-2">
-            <Link
-              href="https://linkedin.com"
-              className="text-gray-600 hover:text-gray-900"
-            >
-              LinkedIn
-            </Link>
-            <p className="text-sm text-gray-600">
-              Copyright © 2024 Kentron
-              <br />
-              All rights reserved
-            </p>
-          </div>
-        </div>
-
-        <div className="mt-16 flex flex-col md:mt-0">
-          {/* PRODUCT Section */}
-          <div className="space-y-4">
-            <h3 className="text-[16px] font-sf-pro font-semibold leading-[16px] text-gray-900">
-              PRODUCT
-            </h3>
-            <ul role="list" className="space-y-2">
-              {navigation.product.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-sm font-sf-pro leading-6 text-gray-600 hover:text-gray-900"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-12">
+          {/* Logo and Social Section - 3 columns wide */}
+          <div className="md:col-span-3 space-y-8">
+            <div>
+              <Link href="/" className="flex items-center">
+                <Image
+                  src="/Frame20.svg"
+                  alt="Kentron"
+                  width={120}
+                  height={40}
+                  priority
+                  className="h-10 w-auto"
+                />
+              </Link>
+            </div>
+            <div className="space-y-6">
+              <Link
+                href="https://linkedin.com"
+                className="inline-flex items-center space-x-2 text-gray-600 hover:text-gray-900"
+              >
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+                <span>LinkedIn</span>
+              </Link>
+              <p className="text-sm text-gray-600">
+                Copyright © {new Date().getFullYear()} Kentron
+                <br />
+                All rights reserved
+              </p>
+            </div>
           </div>
 
-          {/* SOLUTION Section */}
-          <div className="space-y-4 mt-8">
-            <h3 className="text-[16px] font-sf-pro font-semibold leading-[16px] text-gray-900">
-              SOLUTION
-            </h3>
-            <ul role="list" className="space-y-2">
-              {navigation.solution.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-sm font-sf-pro leading-6 text-gray-600 hover:text-gray-900"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          {/* Navigation Sections - 3 columns each */}
+          <div className="md:col-span-3">
+            <div className="space-y-6">
+              <h3 className="text-sm font-semibold tracking-wider text-gray-900 uppercase">
+                Product
+              </h3>
+              <ul role="list" className="space-y-4">
+                {navigation.product.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      className="text-base text-gray-600 hover:text-gray-900 transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
-          {/* PLATFORM Section */}
-          <div className="space-y-4 mt-8">
-            <h3 className="text-[16px] font-sf-pro font-semibold leading-[16px] text-gray-900">
-              PLATFORM
-            </h3>
-            <ul role="list" className="space-y-2">
-              {navigation.platform.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-sm font-sf-pro leading-6 text-gray-600 hover:text-gray-900"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          <div className="md:col-span-3">
+            <div className="space-y-6">
+              <h3 className="text-sm font-semibold tracking-wider text-gray-900 uppercase">
+                Solution
+              </h3>
+              <ul role="list" className="space-y-4">
+                {navigation.solution.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      className="text-base text-gray-600 hover:text-gray-900 transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-        </div>
 
-        {/* LEGAL Section */}
-        <div className="mt-16 md:mt-0">
-          <ul role="list" className="space-y-4">
-            {navigation.legal.map((item) => (
-              <li key={item.name}>
-                <Link
-                  href={item.href}
-                  className="text-sm font-sf-pro leading-6 text-gray-600 hover:text-gray-900"
-                >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <div className="md:col-span-3">
+            <div className="space-y-6">
+              <h3 className="text-sm font-semibold tracking-wider text-gray-900 uppercase">
+                Platform
+              </h3>
+              <ul role="list" className="space-y-4">
+                {navigation.platform.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      className="text-base text-gray-600 hover:text-gray-900 transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="mt-6 space-y-6">
+              <h3 className="text-sm font-semibold tracking-wider text-gray-900 uppercase">
+                Legal
+              </h3>
+              <ul role="list" className="space-y-4">
+                {navigation.legal.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      className="text-base text-gray-600 hover:text-gray-900 transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

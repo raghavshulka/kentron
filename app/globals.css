@@ -17,9 +17,16 @@
   }
 }
 
-html {
+html, body {
   scroll-padding-top: 80px; /* Adjust this value based on your navbar height */
   scroll-behavior: smooth;
+  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+html::-webkit-scrollbar, 
+body::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, Opera */
 }
 
 @layer utilities {

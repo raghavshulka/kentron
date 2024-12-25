@@ -2,14 +2,27 @@ import { cn } from "@/lib/utils";
 import styles from "./common.module.css";
 
 export const GridLineHorizontal = ({ ...props }) => {
+  const baseStyles = {
+    backgroundSize: "32px 1px",
+    height: "1px",
+    backgroundImage: "linear-gradient(to right, rgba(37, 67, 115, 0.2) 10px, transparent 22px)",
+    // Add a small gap between lines on mobile
+    margin: "1px 0",
+    "@media (min-width: 768px)": {
+      margin: "0",
+    },
+  };
+
   return (
     <>
       <div
-        className={cn(styles.gridLineHorizontalDark, "hidden dark:block ")}
+        className={cn(styles.gridLineHorizontalDark, "hidden dark:block")}
+        style={{ ...baseStyles, ...props.style }}
         {...props}
       />
       <div
-        className={cn(styles.gridLineHorizontal, "block dark:hidden ")}
+        className={cn(styles.gridLineHorizontal, "block dark:hidden")}
+        style={{ ...baseStyles, ...props.style }}
         {...props}
       />
     </>
@@ -20,7 +33,7 @@ export const GridLineVertical = ({ ...props }) => {
   const baseStyles = {
     width: "1px",
     backgroundSize: "1px 32px",
-    backgroundImage: "linear-gradient(to bottom, rgba(37, 67, 115, 0.3) 10px, transparent 22px)",
+    backgroundImage: "linear-gradient(to bottom, rgba(37, 67, 115, 0.2) 10px, transparent 22px)",
   };
 
   return (
