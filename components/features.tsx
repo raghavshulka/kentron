@@ -37,8 +37,13 @@ const FeatureDescription = ({ children }: { children?: React.ReactNode }) => {
 
 // Memoize components after their definitions
 const MemoizedFeatureCard = memo(FeatureCard);
+MemoizedFeatureCard.displayName = 'MemoizedFeatureCard';
+
 const MemoizedFeatureTitle = memo(FeatureTitle);
+MemoizedFeatureTitle.displayName = 'MemoizedFeatureTitle';
+
 const MemoizedFeatureDescription = memo(FeatureDescription);
+MemoizedFeatureDescription.displayName = 'MemoizedFeatureDescription';
 
 // Move features array outside component to prevent recreation on each render
 const features = [
@@ -126,3 +131,4 @@ export const Features = memo(() => {
     </div>
   );
 });
+Features.displayName = 'Features';
