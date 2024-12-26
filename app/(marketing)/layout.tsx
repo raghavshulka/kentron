@@ -4,6 +4,7 @@ import { GeistSans } from "geist/font/sans";
 import { NavBar } from "@/components/navbar";
 import { cn } from "@/lib/utils";
 import Footer  from "@/components/footer";
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 
 export const metadata: Metadata = {
   title: "Kentron",
@@ -20,10 +21,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <html lang="en">
+      <head>
+        <GoogleAnalytics />
+      </head>
+      <body>
         <main className="scroll-smooth overflow-hidden">
           <NavBar />
           {children}
           <Footer />
         </main>
+      </body>
+    </html>
   );
 }

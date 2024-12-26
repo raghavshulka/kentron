@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -17,21 +17,51 @@ export function NavBar() {
   });
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [expandedMobile, setExpandedMobile] = useState<string | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+  const dropdownRefs = useRef<Record<string, HTMLLIElement | null>>({});
+
+  // Detect if the viewport is mobile-sized
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (!isMobile) {
+        const isOutside = Object.values(dropdownRefs.current).every(
+          (ref) => ref && !ref.contains(event.target as Node)
+        );
+        if (isOutside) {
+          closeAllDropdowns();
+        }
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isMobile]);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen((prev) => !prev);
+  };
+
+  const handleDropdownHover = (key: string, isHovering: boolean) => {
+    if (!isMobile) {
+      setDropdowns((prev) => ({
+        ...prev,
+        [key]: isHovering,
+      }));
+    }
   };
 
   const toggleDropdown = (key: string) => {
-    // On desktop: toggle dropdown
-    // On mobile: toggle expansion
-    if (window.innerWidth >= 768) {
-      setDropdowns((prev) => ({
-        ...prev,
-        [key]: !prev[key],
-      }));
-    } else {
-      setExpandedMobile(expandedMobile === key ? null : key);
+    if (isMobile) {
+      setExpandedMobile((prev) => (prev === key ? null : key));
     }
   };
 
@@ -42,13 +72,17 @@ export function NavBar() {
 
   const dropdownConfigs: DropdownConfig[] = [
     { key: "product", label: "PRODUCT", items: ["Overview", "Features"] },
-    { key: "solution", label: "SOLUTION", items: ["Use Cases", "Integrations"] },
+    {
+      key: "solution",
+      label: "SOLUTION",
+      items: ["Use Cases", "Integrations"],
+    },
     { key: "platform", label: "PLATFORM", items: ["Pricing", "Support"] },
   ];
 
   return (
     <nav className="absolute top-0 left-0 w-full z-50 bg-transparent">
-      <div className="mx-[12px] mt-[20px] md:mx-[20px] md:mt-[40px] lg:mx-[40px] lg:mt-[47px] flex flex-wrap items-center justify-between">
+      <div className="mx-4 mt-5 md:mx-8 md:mt-10 lg:mx-10 lg:mt-12 flex flex-wrap items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
@@ -89,21 +123,35 @@ export function NavBar() {
             isMenuOpen ? "block" : "hidden"
           } w-full md:block md:w-auto`}
         >
-          <ul className="flex flex-col p-3 md:p-0 mt-3 md:mt-0 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row
-            bg-white/5 backdrop-blur-xl border border-white/10 md:bg-transparent md:backdrop-filter-none md:border-0">
+          <ul
+            className="flex flex-col p-3 md:p-0 mt-3 md:mt-0 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row
+            bg-white/5 backdrop-blur-xl border border-white/10 md:bg-transparent md:backdrop-filter-none md:border-0"
+          >
             {dropdownConfigs.map(({ key, label, items }) => (
-              <li key={key} className="relative">
+              <li
+                key={key}
+                ref={(el) => {
+                  if (el) {
+                    dropdownRefs.current[key] = el;
+                  }
+                }}
+                className="relative"
+                onMouseEnter={() => handleDropdownHover(key, true)}
+                onMouseLeave={() => handleDropdownHover(key, false)}
+              >
                 <button
                   onClick={() => toggleDropdown(key)}
-                  className="flex items-center justify-between w-full py-1.5 px-2.5 
-                    text-xs tracking-wide md:text-[16px] lg:text-base md:font-sf-pro text-white/90 
+                  className="flex items-center justify-between w-full py-2 px-3 
+                    text-sm tracking-wide md:text-[16px] lg:text-base md:font-sf-pro text-white/90 
                     rounded hover:bg-white/10 md:hover:bg-transparent md:border-0 
-                    md:hover:text-white md:p-0 md:w-auto transition-colors duration-200"
+                    md:hover:text-white md:p-0 md:w-auto transition-all duration-200"
                 >
                   {label}
                   <svg
-                    className={`w-3.5 h-3.5 md:w-[15px] md:h-[15px] ms-1.5 md:ms-2.5 transition-transform duration-200 ${
-                      (expandedMobile === key || dropdowns[key]) ? 'rotate-180' : ''
+                    className={`w-4 h-4 md:w-5 md:h-5 ml-2 transition-transform duration-200 ${
+                      expandedMobile === key || dropdowns[key]
+                        ? "rotate-180"
+                        : ""
                     }`}
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
@@ -121,14 +169,18 @@ export function NavBar() {
                 </button>
 
                 {/* Desktop Dropdown */}
-                {dropdowns[key] && window.innerWidth >= 768 && (
-                  <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                {!isMobile && dropdowns[key] && (
+                  <div
+                    className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white/10 backdrop-blur-xl 
+                    border border-white/10 transform opacity-100 scale-100 transition-all duration-200 ease-out"
+                  >
                     <div className="py-1">
                       {items.map((item) => (
                         <a
                           key={item}
                           href="#"
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          className="block px-4 py-2 text-sm text-white/90 hover:bg-white/10 
+                            transition-colors duration-200"
                         >
                           {item}
                         </a>
@@ -138,13 +190,14 @@ export function NavBar() {
                 )}
 
                 {/* Mobile Expanded Menu */}
-                {expandedMobile === key && window.innerWidth < 768 && (
+                {isMobile && expandedMobile === key && (
                   <div className="mt-1 pl-3 border-l border-white/10">
                     {items.map((item) => (
                       <a
                         key={item}
                         href="#"
-                        className="block py-1.5 text-[11px] tracking-wide text-white/80 hover:text-white transition-colors duration-200"
+                        className="block py-1.5 text-sm tracking-wide text-white/80 
+                          hover:text-white transition-colors duration-200"
                       >
                         {item}
                       </a>
