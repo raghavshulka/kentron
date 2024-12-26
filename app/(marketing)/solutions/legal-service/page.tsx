@@ -16,4 +16,6 @@ export default function LegalServicePage() {
       </div>
     </div>
   );
-} 
+}
+
+LegalServicePage.displayName = 'LegalServicePage'; 

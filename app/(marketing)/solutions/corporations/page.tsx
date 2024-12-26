@@ -10,7 +10,7 @@ export default function CorporationsPage() {
         <div className="flex flex-col items-center justify-center py-20">
           <div className="text-2xl font-semibold text-gray-300 mb-4">🚧 Under Construction 🚧</div>
           <p className="text-gray-400 text-center max-w-md">
-            We're working hard to bring you amazing content. Please check back soon!
+            We&apos;re working hard to bring you amazing content. Please check back soon!
           </p>
         </div>
       </div>
