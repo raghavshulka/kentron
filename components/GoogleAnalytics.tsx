@@ -6,7 +6,7 @@ export default function GoogleAnalytics() {
       <script
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-RYK6779T8F"
-      />
+      ></script>
       <script
         dangerouslySetInnerHTML={{
           __html: `
