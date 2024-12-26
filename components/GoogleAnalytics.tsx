@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 export default function GoogleAnalytics() {
   return (
@@ -19,4 +19,4 @@ export default function GoogleAnalytics() {
       />
     </>
   );
-} 
+}
