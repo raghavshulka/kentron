@@ -9,7 +9,6 @@ export default function MarketingLayout({
   return (
     <main className="scroll-smooth overflow-hidden">
       <NavBar />
-  
       {children}
       <Footer />
     </main>
