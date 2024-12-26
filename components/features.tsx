@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { memo } from "react";
 import { Heading } from "./heading";
 import { Subheading } from "./subheading";
 import { cn } from "@/lib/utils";
@@ -11,21 +11,52 @@ import { SkeletonFour } from "./skeletons/fourth";
 import { SkeletonThree } from "./skeletons/third";
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 
-export const Features = () => {
+const FeatureCard = ({ children, className }: { children?: React.ReactNode; className?: string }) => {
+  return (
+    <div className={cn(`p-4 sm:p-8 relative overflow-hidden`, className)}>
+      {children}
+    </div>
+  );
+};
+
+const FeatureTitle = ({ children }: { children?: React.ReactNode }) => {
+  return (
+    <div className="md:text-left text-[16px] md:text-2xl font-semibold text-gray-900 mt-4">
+      {children}
+    </div>
+  );
+};
+
+const FeatureDescription = ({ children }: { children?: React.ReactNode }) => {
+  return (
+    <Subheading className="text-left max-w-xs mx-0 md:text-base my-2 text-[12px] text-gray-600">
+      {children}
+    </Subheading>
+  );
+};
+
+// Memoize components after their definitions
+const MemoizedFeatureCard = memo(FeatureCard);
+const MemoizedFeatureTitle = memo(FeatureTitle);
+const MemoizedFeatureDescription = memo(FeatureDescription);
+
+// Move features array outside component to prevent recreation on each render
+const features = [
+  {
+    title: "All in One eDiscovery and Compliance Hub",
+    description:
+      "With our blazing fast, state of art connectors, Seamlessly Collect, Analyze, and Act from Over 20 Enterprise Platforms",
+    skeleton: <SkeletonFour />,
+    className: "col-span-1 md:col-span-3",
+  },
+];
+
+export const Features = memo(() => {
   const [featuresRef, isVisible] = useIntersectionObserver({
     threshold: 0.1,
     rootMargin: '50px'
   });
 
-  const features = [
-    {
-      title: "All in One eDiscovery and Compliance Hub",
-      description:
-        "With our blazing fast, state of art connectors, Seamlessly Collect, Analyze, and Act from Over 20 Enterprise Platforms",
-      skeleton: <SkeletonFour />,
-      className: "col-span-1 md:col-span-3",
-    },
-  ];
   return (
     <div ref={featuresRef} className="relative mx-[14px] mt-[90px] md:mt-[160px] md:ml-[80px]">
       {isVisible && (
@@ -51,11 +82,11 @@ export const Features = () => {
             <div className="relative w-[350px] md:w-[1300px]">
               <div className="flex flex-row justify-center mt-12">
                 {features.map((feature) => (
-                  <FeatureCard key={feature.title} className={feature.className}>
-                    <FeatureTitle>{feature.title}</FeatureTitle>
-                    <FeatureDescription>{feature.description}</FeatureDescription>
+                  <MemoizedFeatureCard key={feature.title} className={feature.className}>
+                    <MemoizedFeatureTitle>{feature.title}</MemoizedFeatureTitle>
+                    <MemoizedFeatureDescription>{feature.description}</MemoizedFeatureDescription>
                     <div className="h-full w-full">{feature.skeleton}</div>
-                  </FeatureCard>
+                  </MemoizedFeatureCard>
                 ))}
               </div>
               <GridLineHorizontal
@@ -94,34 +125,4 @@ export const Features = () => {
       )}
     </div>
   );
-};
-
-const FeatureCard = ({
-  children,
-  className,
-}: {
-  children?: React.ReactNode;
-  className?: string;
-}) => {
-  return (
-    <div className={cn(`p-4 sm:p-8 relative overflow-hidden`, className)}>
-      {children}
-    </div>
-  );
-};
-
-const FeatureTitle = ({ children }: { children?: React.ReactNode }) => {
-  return (
-    <div  className="md:text-left text-[16px] md:text-2xl font-semibold text-gray-900 mt-4">
-      {children}
-    </div>
-  );
-};
-
-const FeatureDescription = ({ children }: { children?: React.ReactNode }) => {
-  return (
-    <Subheading className="text-left max-w-xs mx-0 md:text-base my-2 text-[12px] text-gray-600">
-      {children}
-    </Subheading>
-  );
-};
+});
