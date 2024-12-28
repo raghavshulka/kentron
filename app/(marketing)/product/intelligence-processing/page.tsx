@@ -4,7 +4,7 @@ export default function IntelligenceRetrievalPage() {
   return (
     <div className="min-h-screen bg-black text-white py-32 px-4">
       <div className="container mx-auto">
-        <h1 className="text-4xl font-bold mb-6">Intelligence Retrieval Engine</h1>
+        <h1 className="text-4xl font-bold mb-6">Intelligence Processing Engine</h1>
         
         {/* Under Construction Message */}
         <div className="flex flex-col items-center justify-center py-20">

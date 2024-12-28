@@ -52,8 +52,8 @@ export function BentoGridItem({
   return (
     <div
       className={cn(
-        "row-span-1 group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none dark:bg-black bg-white relative",
-        "before:absolute before:inset-0 before:border-[1.5px] before:border-dashed before:border-neutral-200",
+        "row-span-1 group/bento transition duration-200 shadow-input dark:shadow-none dark:bg-black bg-white relative",
+        "before:absolute before:inset-0 before:border-[1px] md:before:border-[1.5px] before:border-dashed before:border-[#25437329]",
         className
       )}
       {...props}

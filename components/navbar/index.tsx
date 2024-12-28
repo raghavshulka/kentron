@@ -18,8 +18,8 @@ const menuItems = [
     items: [
       { title: "Unified Ingestion Engine", href: "/product/unified-ingestion" },
       {
-        title: "Intelligence Retrieval Engine",
-        href: "/product/intelligence-retrieval",
+        title: "Intelligence Processing Engine",
+        href: "/product/intelligence-processing",
       },
       {
         title: "Predictive Compliance Engine",
@@ -76,7 +76,7 @@ export function NavBar() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden relative z-50 w-8 h-8 flex items-center justify-center rounded-lg hover:bg-white/10 transition-colors"
+          className="md:hidden relative z-50 w-8 h-8 flex items-center justify-center rounded-lg  transition-colors"
           aria-label="Toggle menu"
         >
           <div className="relative w-4 h-3">
@@ -111,7 +111,8 @@ export function NavBar() {
                     {section.title}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[200px] md:w-[300px] p-2 bg-black/80 backdrop-blur-xl border border-white/10 rounded-lg">
+                    <ul className="grid w-[200px] md:w-[300px] p-2 bg-black/10 shadow-md backdrop-blur-xl  z-50 border-white/[0.15] rounded-md 
+                      bg-gradient-to-b from-black/5 to-black/10">
                       {section.items.map((item) => (
                         <ListItem
                           key={item.title}
@@ -137,7 +138,7 @@ export function NavBar() {
               : "opacity-0 translate-x-full pointer-events-none"
           )}
         >
-          <div className="absolute inset-0 bg-black/90 backdrop-blur-md" />
+          <div className="absolute inset-0 bg-black/70  backdrop-blur-md" />
           <nav className="relative h-full w-full pt-24 pb-6 px-6 flex flex-col">
             {menuItems.map((section) => (
               <div

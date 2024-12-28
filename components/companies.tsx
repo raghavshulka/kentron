@@ -1,6 +1,5 @@
 import React from "react";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
-import { GridLineHorizontal } from "./grid-lines";
 
 export function Companies() {
   return (
