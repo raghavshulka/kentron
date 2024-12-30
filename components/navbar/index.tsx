@@ -39,11 +39,11 @@ const menuItems = [
   {
     title: "RESOURCES",
     items: [
-      { title: "Help Center", href: "/resources/help-center" },
-      { title: "Connectors", href: "/resources/connectors" },
+      { title: "Documentation", href: "https://docs.kentron.ai", target: "_blank" },
+      { title: "Connectors", href: "https://docs.kentron.ai/connector", target: "_blank" },
       { title: "Secure by Design", href: "/resources/security" },
-      { title: "Case Studies", href: "/resources/case-studies" },
-      { title: "Regulations", href: "/resources/regulations" },
+      { title: "Case Studies", href: "/resources/case-studies"},
+      { title: "Regulations", href: "https://docs.kentron.ai/regulations", target: "_blank" },
     ],
   },
 ];
@@ -111,13 +111,16 @@ export function NavBar() {
                     {section.title}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[200px] md:w-[300px] p-2 bg-black/10 shadow-md backdrop-blur-xl  z-50 border-white/[0.15] rounded-md 
-                      bg-gradient-to-b from-black/5 to-black/10">
+                    <ul
+                      className="grid w-[200px] md:w-[300px] p-2 bg-black/10 shadow-md backdrop-blur-xl  z-50 border-white/[0.15] rounded-md 
+                      bg-gradient-to-b from-black/5 to-black/10"
+                    >
                       {section.items.map((item) => (
                         <ListItem
                           key={item.title}
                           href={item.href}
                           title={item.title}
+                          target={item.target}
                         />
                       ))}
                     </ul>
@@ -173,12 +176,13 @@ export function NavBar() {
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
   React.ComponentPropsWithoutRef<"a"> & { title: string }
->(({ className, title, children, href, ...props }, ref) => {
+>(({ className, title, children, href, target, ...props }, ref) => {
   return (
     <li>
       <NavigationMenuLink asChild>
         <Link
           href={href || "#"}
+          target={target}
           className={cn(
             "block select-none rounded-md px-3 py-2.5 text-sm leading-tight no-underline outline-none transition-colors hover:bg-white/10 hover:text-white focus:bg-white/10 focus:text-white bg-transparent text-white/90 whitespace-nowrap",
             className

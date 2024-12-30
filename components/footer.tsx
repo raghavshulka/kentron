@@ -47,7 +47,7 @@ export default function Footer() {
             </div>
             <div className="space-y-6">
               <Link
-                href="https://linkedin.com"
+                href=" https://www.linkedin.com/company/kentronai"
                 className="inline-flex items-center space-x-2 text-gray-600 hover:text-gray-900"
               >
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
