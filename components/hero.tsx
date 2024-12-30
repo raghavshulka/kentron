@@ -12,9 +12,6 @@ import { useRouter } from "next/navigation";
 import { Link } from "next-view-transitions";
 import { GridLineHorizontal, GridLineVertical } from "./grid-lines";
 
-const videoLink =
-  "https://s3-figma-videos-production-sig.figma.com/video/1449418450884842075/TEAM/47ac/b598/-57dc-43e8-ae9a-7494a29787fa?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=emiYTkBw1DZSG2156664tWh9SqWB3LHUwWjYn~v4hb9pdFRQk5kCrEJsnDoIkBDMPPAB~thucIctxU~AKj2mSj5BUz0ta8EdoQCVMNg0yDvb5Kdr0FzoHXxTIvnWC6r5mvVjLgTFoKD1~5eU4xygE0On1J1ie85fmAJq7PtnUxAQCffltm6SroyJ2AeSLMX1OlkpafDvMTF-y~yh-9v9kDkPgHIeOY~t6zldAOZLpaFapYPfmJgWFNWQPEgaVtAT-XgFdxZvAymKsZfKSk3PNTTT~aJd9n97~m-M~FPztxW863p6GD9NkWkMQyQHLeFBT5DyHI35843xjWixr1tZnQ__";
-
 export const Hero = () => {
   const openFormInNewTab = () => {
     window.open(
@@ -28,7 +25,7 @@ export const Hero = () => {
       <GridLineHorizontal />
       <video
         className="absolute w-full h-screen object-cover"
-        src={videoLink}
+        src="/video.mp4"
         autoPlay
         loop
         muted
