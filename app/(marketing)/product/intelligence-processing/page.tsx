@@ -51,15 +51,6 @@ export default function IntelligenceRetrievalPage() {
             </p>
           </div>
 
-          {/* RAG Features */}
-          <div className="bg-white/5 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold mb-3">Advanced RAG Technology</h3>
-            <ul className="text-gray-300 space-y-2 list-disc pl-4">
-              <li>Proprietary graph-based retrieval-augmented generation (RAG), achieves higher accuracy</li>
-              <li>Seamless, intuitive responses to user queries that reference source documents or information</li>
-              <li>Source document attribution, allowing users to obtain additional context</li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>
