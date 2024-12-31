@@ -4,11 +4,28 @@ import { GeistSans } from "geist/font/sans";
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 
 export const metadata: Metadata = {
-  title: "Kentron",
-  description:
-    "Kentron is a platform that provides a wide range of AI tools and services to help you stay on top of your business. Generate images, text and everything else that you need to get your business off the ground.",
-  openGraph: {
-    images: ["https://ai-saas-template-aceternity.vercel.app/banner.png"],
+  title: {
+    default: 'KENTRON | Enterprise Legal Intelligence Platform',
+    template: '%s | KENTRON'
+  },
+  description: 'KENTRON is an Enterprise Legal Intelligence Platform that streamlines data management, ensures compliance, and provides advanced security features for legal and compliance purposes.',
+  keywords: [
+    'Legal Intelligence',
+    'Enterprise Compliance',
+    'Data Security',
+    'Legal Technology',
+    'Compliance Management',
+    'Data Privacy',
+    'Enterprise Security',
+    'Legal Data Management'
+  ],
+  authors: [{ name: 'KENTRON' }],
+  creator: 'KENTRON',
+  publisher: 'KENTRON',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
   },
 };
 
