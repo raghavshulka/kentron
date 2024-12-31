@@ -4,37 +4,36 @@ export default function SecurityPage() {
   return (
     <div className="min-h-screen bg-black text-white py-32 px-4">
       <div className="container mx-auto max-w-4xl">
-        <h1 className="text-4xl font-bold mb-8">Secure by Design</h1>
+        <h1 className="text-4xl font-bold mb-8">Secure By Design</h1>
         
         <p className="text-xl text-gray-300 mb-12">
-          Kentron was developed from the ground up with a focus on security, privacy, and compliance. 
+          KENTRON was developed from the ground up with a focus on security, privacy, and compliance. 
           Engineered to safeguard your data.
         </p>
 
         <div className="grid gap-8 md:grid-cols-2">
-          {/* Security Features */}
           <SecurityFeature 
-            title="Authentication & Verification"
-            description="To access Kentron's resources, users must authenticate through your enterprise's identity provider."
+            title="Authentication And Verification"
+            description="To access KENTRON's resources, users must authenticate through your enterprise's identity provider."
           />
           
           <SecurityFeature 
             title="Role-Based Access Control"
-            description="Only displays information that you already have permission to access in the source application. Build-in roles such as Global admin, admin, member, and auditor empower organizations to manage permission at a granular level."
+            description="Only displays information that you already have permission to access in the source application. Build-in roles such as Global Admin, Admin, Member, and Auditor empower organizations to manage permission at a granular level."
           />
           
           <SecurityFeature 
             title="Single Tenant"
-            description="Kentron isolates all your data and stores it in a dedicated cloud instance."
+            description="KENTRON isolates all your data and stores it in a dedicated cloud instance."
           />
           
           <SecurityFeature 
             title="Audit Logging"
-            description="Access detailed audit logs of your organization's use of the Kentron platform. You can export these logs to your SIEM for monitoring and alerts."
+            description="Access detailed audit logs of your organization's use of the KENTRON platform. You can export these logs to your SIEM for monitoring and alerts."
           />
           
           <SecurityFeature 
-            title="On-demand Sync"
+            title="On-Demand Sync"
             description="On-demand content creation empowers users to collect data when they need the most."
           />
           
