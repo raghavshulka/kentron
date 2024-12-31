@@ -13,13 +13,13 @@ export default function SecurityPage() {
 
         <div className="grid gap-8 md:grid-cols-2">
           <SecurityFeature 
-            title="Authentication And Verification"
+            title="Authentication & Verification"
             description="To access KENTRON's resources, users must authenticate through your enterprise's identity provider."
           />
           
           <SecurityFeature 
             title="Role-Based Access Control"
-            description="Only displays information that you already have permission to access in the source application. Build-in roles such as Global Admin, Admin, Member, and Auditor empower organizations to manage permission at a granular level."
+            description="Only displays information that you already have permission to access in the source application. Built-in roles such as Global Admin, Admin, Member, and Auditor empower organizations to manage permissions at a granular level."
           />
           
           <SecurityFeature 
@@ -34,7 +34,7 @@ export default function SecurityPage() {
           
           <SecurityFeature 
             title="On-Demand Sync"
-            description="On-demand content creation empowers users to collect data when they need the most."
+            description="On-demand content creation empowers users to collect data when they need it most."
           />
           
           <SecurityFeature 
