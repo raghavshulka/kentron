@@ -18,7 +18,7 @@ const menuItems = [
     items: [
       { title: "Unified Ingestion Engine", href: "/product/unified-ingestion" },
       {
-        title: "Intelligence Processing Engine",
+        title: "Intelligent Processing Engine",
         href: "/product/intelligence-processing",
       },
       {
