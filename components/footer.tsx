@@ -48,6 +48,7 @@ export default function Footer() {
             <div className="space-y-6">
               <Link
                 href=" https://www.linkedin.com/company/kentronai"
+                target="_blank"
                 className="inline-flex items-center space-x-2 text-gray-600 hover:text-gray-900"
               >
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -123,7 +124,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div className="mt-6 space-y-6">
+            {/* <div className="mt-6 space-y-6">
               <h3 className="text-sm font-semibold tracking-wider text-gray-900 uppercase">
                 Legal
               </h3>
@@ -139,7 +140,7 @@ export default function Footer() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
