@@ -4,7 +4,7 @@ export default function UnifiedIngestionPage() {
   return (
     <div className="min-h-screen bg-black text-white py-32 px-4">
       <div className="container mx-auto max-w-4xl">
-        <h1 className="text-4xl font-bold mb-6">Unified Ingestion Engine</h1>
+        <h1 className="text-4xl text-center font-bold mb-6">Unified Ingestion Engine</h1>
         
         {/* Main Description */}
         <section className="mb-12">
@@ -23,7 +23,7 @@ export default function UnifiedIngestionPage() {
         </section>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {/* Integrations */}
           <div className="bg-white/5 p-6 rounded-lg">
             <h3 className="text-xl font-semibold mb-3">Integrations</h3>
