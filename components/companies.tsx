@@ -39,7 +39,7 @@ const items = [
         <img
           src="/group.svg"
           alt="Connectors"
-          className="w-full h-full md:w-[580px] md:h-[200px]   object-contain md:p-2"
+          className="w-full h-full md:w-[580px] md:h-[200px]   object-contain p-4 md:p-2"
           loading="lazy"
           decoding="async"
         />
