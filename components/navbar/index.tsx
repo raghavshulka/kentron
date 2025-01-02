@@ -194,59 +194,61 @@ export function NavBar() {
         {/* Mobile Menu */}
         <div
           className={cn(
-            "fixed inset-0 top-0 z-40 md:hidden",
+            "fixed inset-0 top-0 z-40 md:hidden bg-black/70 backdrop-blur-md",
             "transition-all duration-300 ease-in-out",
             isMenuOpen
               ? "opacity-100 translate-x-0"
               : "opacity-0 translate-x-full pointer-events-none"
           )}
         >
-          <div className="absolute inset-0 bg-black/70  backdrop-blur-md" />
-          <nav className="relative h-full w-full pt-24 pb-6 px-6 flex flex-col">
-            {menuItems.map((section) => (
-              <div key={section.title} className="py-4 border-b border-white/10">
-                <h2 className="text-white/70 text-sm font-medium tracking-wider mb-4">
-                  {section.title}
-                </h2>
-                <ul className="space-y-4">
-                  {section.items.map((item) => (
-                    <li key={item.title}>
-                      <Link
-                        href={item.href}
-                        onClick={() => setIsMenuOpen(false)}
-                        className="text-white/90 hover:text-white text-base font-normal block transition-colors"
-                      >
-                        {item.title}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-                {section.useCases && (
-                  <div className="mt-6">
-                    <h2 className="text-white/70 text-sm font-medium tracking-wider mb-4">
-                      USE CASES
-                    </h2>
-                    <ul className="space-y-4">
-                      {section.useCases.map((useCase) => (
-                        <li key={useCase.title}>
-                          <Link
-                            href={useCase.href}
-                            onClick={() => setIsMenuOpen(false)}
-                            className="text-white/90 hover:text-white block transition-colors"
-                          >
-                            <div className="text-base font-normal">{useCase.title}</div>
-                            <p className="text-sm text-white/70 mt-1">
-                              {useCase.description}
-                            </p>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </div>
-            ))}
-          </nav>
+          <div className="h-full overflow-y-auto">
+            <nav className="relative w-full px-6 py-0">
+              {menuItems.map((section) => (
+                <div key={section.title} className="py-4 border-b border-white/10">
+                  <h2 className="text-white/70 text-sm font-medium tracking-wider mb-4">
+                    {section.title}
+                  </h2>
+                  <ul className="space-y-4">
+                    {section.items.map((item) => (
+                      <li key={item.title}>
+                        <Link
+                          href={item.href}
+                          onClick={() => setIsMenuOpen(false)}
+                          className="text-white/90 hover:text-white text-base font-normal block transition-colors"
+                          target={item.target}
+                        >
+                          {item.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                  {section.useCases && (
+                    <div className="mt-6">
+                      <h2 className="text-white/70 text-sm font-medium tracking-wider mb-4">
+                        USE CASES
+                      </h2>
+                      <ul className="space-y-4">
+                        {section.useCases.map((useCase) => (
+                          <li key={useCase.title}>
+                            <Link
+                              href={useCase.href}
+                              onClick={() => setIsMenuOpen(false)}
+                              className="text-white/90 hover:text-white block transition-colors"
+                            >
+                              <div className="text-base font-normal">{useCase.title}</div>
+                              <p className="text-sm text-white/70 mt-1">
+                                {useCase.description}
+                              </p>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </nav>
+          </div>
         </div>
       </div>
     </nav>
