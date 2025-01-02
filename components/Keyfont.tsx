@@ -29,7 +29,7 @@ const benefits = [
     icon: <img src="/shield-search.svg" alt="icon" />,
     title: "Detect, De-identify, and Protect PII",
     description:
-      "Extract personally identifiable information (PII) from text, images, audio, or video files to enable machine learning and analytics workflows while ensuring privacy protection.",
+      "Extract personally identifiable information (PII) from text, images, audio, or video files to ensure privacy protection in data export",
   },
   {
     icon: <img src="/3square.svg" alt="icon" />,

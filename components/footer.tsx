@@ -4,9 +4,9 @@ import Image from "next/image";
 export default function Footer() {
   const navigation = {
     product: [
-      { name: "Unified Ingestion Engine", href: "#" },
-      { name: "Intelligence Retrieval Engine", href: "#" },
-      { name: "Predictive Compliance Engine", href: "#" },
+      { name: "Unified Ingestion Engine", href: "/product/unified-ingestion" },
+      { name: "Intelligent Retrieval Engine", href: "/product/intelligence-processing" },
+      { name: "Predictive Compliance Engine", href: "/product/predictive-compliance" },
     ],
     solution: [
       { name: "Corporations", href: "#" },

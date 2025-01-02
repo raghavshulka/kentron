@@ -8,9 +8,9 @@ import { GridLineHorizontal } from "./grid-lines";
 export default function GraphFeatures() {
   const engines = [
     {
-      title: "Intelligence Retrieval Engine",
+      title: "Intelligent Retrieval Engine",
       description:
-        "The Kentron Intelligence retrieval engine is context-aware with ingested content, retrieving relevant and most accurate information",
+        "Kentron’s Intelligent retrieval engine is context-aware with ingested content, retrieving relevant and most accurate information.",
       features: [
         {
           title:
@@ -32,7 +32,7 @@ export default function GraphFeatures() {
     {
       title: "Predictive Compliance Engine",
       description:
-        "Utilize ML and AI to detect and prevent risks, support reviewers, and implement protection measures",
+        "Kentron leverages AI and ML to identify and mitigate risks, assist reviewers, and enforce protection measures.",
       features: [
         {
           title:
@@ -131,11 +131,11 @@ export default function GraphFeatures() {
 
       <div className="mx-auto md:mt-[120px] px-[28px] mt-[49px] mb-[30px]">
         <h2 className="max-w-[336px] md:max-w-[1150px] md:leading-[39px] md:tracking-[0.02em] text-center md:text-left font-sf-pro text-[#222222] md:text-[30px] text-[24px] leading-[30px] font-[700]">
-          Our product is best suited {" "}
+        Kentron’s unified, intelligent, and proactive platform{" "}
           <span className="text-gray-400 font-[500]">
-            for businesses seeking efficient, scalable solutions to optimize
-            operations and drive growth. Ideal for companies in need of seamless
-            integration and advanced analytics capabilities.
+             {" "} simplifies
+            compliance management and delivers superior value for enterprises
+            navigating complex legal and regulatory landscapes
           </span>
         </h2>
       </div>
