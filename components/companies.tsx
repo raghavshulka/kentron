@@ -12,9 +12,8 @@ export function Companies() {
           Efficiently Ingest Content with Precision at Enterprise Scale
         </p>
       </div>
-      <div className="relative mt-[40px] md:mt-[60px] mb-[24px]">
-      </div>
-      <div className="mx-auto mb-[40px] md:mb-[72px]">
+      <div className="relative mt-[40px] md:mt-[60px] mb-[24px]"></div>
+      <div className="mx-auto mb-[40px] md:mb-[72px] md:px-[100px]">
         <BentoGrid>
           {items.map((item, i) => (
             <BentoGridItem
@@ -26,9 +25,7 @@ export function Companies() {
           ))}
         </BentoGrid>
       </div>
-      <div className="relative">
-       
-      </div>
+      <div className="relative"></div>
     </div>
   );
 }
@@ -38,11 +35,11 @@ const items = [
     description:
       "Prebuilt connectors to commonly used enterprise data repositories",
     header: (
-      <div className="flex items-center justify-center w-full h-full">
+      <div className="flex items-center  justify-center w-full h-full">
         <img
-          src="/Frame18.svg"
+          src="/group.svg"
           alt="Connectors"
-          className="w-full h-full object-contain md:p-6"
+          className="w-full h-full md:w-[580px] md:h-[200px]   object-contain md:p-2"
           loading="lazy"
           decoding="async"
         />
