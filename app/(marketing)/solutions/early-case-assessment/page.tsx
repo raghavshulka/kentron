@@ -20,8 +20,7 @@ const EarlyCaseAssessment = () => {
           <h1 className="text-5xl font-bold mb-4 mt-14 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
             Early Case Assessment
           </h1>
-          <p className="text-xl text-gray-400">
-          </p>
+          <p className="text-xl text-gray-400"></p>
         </header>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
@@ -34,8 +33,8 @@ const EarlyCaseAssessment = () => {
             </CardHeader>
             <CardContent className="text-gray-300">
               <p>
-                In legal practice, whether you're representing a client in a
-                high-stakes litigation or managing a routine legal matter, the
+                In legal practice, whether you&apos;re representing a client in
+                a high-stakes litigation or managing a routine legal matter, the
                 importance of early case assessment (ECA) cannot be overstated.
                 Early case assessment refers to evaluating the facts, evidence,
                 and legal issues of a case as soon as it arises, often before
@@ -90,7 +89,7 @@ const EarlyCaseAssessment = () => {
                   Informed Decision-Making:
                 </strong>{" "}
                 Early case assessment provides a comprehensive understanding of
-                a case's strengths and weaknesses. By evaluating evidence,
+                a case&apos;s strengths and weaknesses. By evaluating evidence,
                 assessing legal claims, and identifying potential risks early
                 on, attorneys can make more informed decisions about how to
                 proceed. This insight allows for strategic planning and helps
@@ -123,7 +122,7 @@ const EarlyCaseAssessment = () => {
                   Risk Mitigation:
                 </strong>{" "}
                 Identifying potential risks early in the process allows legal
-                teams to address them proactively. Whether it's uncovering
+                teams to address them proactively. Whether it&apos;s uncovering
                 weaknesses in evidence or anticipating challenges from opposing
                 counsel, early case assessment helps in developing strategies to
                 mitigate these risks. This foresight can prevent surprises and
@@ -140,9 +139,9 @@ const EarlyCaseAssessment = () => {
                 </strong>{" "}
                 Having a detailed early case assessment provides a strategic
                 advantage in litigation. It allows legal teams to anticipate the
-                opposing party's arguments, prepare counterarguments, and adjust
-                their strategies accordingly. This preparedness can be crucial
-                in high-stakes cases where every advantage counts.
+                opposing party&apos;s arguments, prepare counterarguments, and
+                adjust their strategies accordingly. This preparedness can be
+                crucial in high-stakes cases where every advantage counts.
               </div>
             </li>
             <li className="flex items-start">
@@ -172,14 +171,14 @@ const EarlyCaseAssessment = () => {
           </CardHeader>
           <CardContent>
             <p className="text-gray-300 leading-relaxed">
-              Early case assessment is more than just a preliminary step; it's a
-              strategic advantage that can influence every aspect of legal
-              practice. The benefits of starting early are substantial from
-              informed decision-making and cost efficiency to improved case
+              Early case assessment is more than just a preliminary step;
+              it&apos;s a strategic advantage that can influence every aspect of
+              legal practice. The benefits of starting early are substantial
+              from informed decision-making and cost efficiency to improved case
               management and client satisfaction. For legal professionals
               committed to achieving the best outcomes for their clients,
               incorporating early case assessment into their practice is not
-              just recommended—it's essential.
+              just recommended—it&apos;s essential.
             </p>
           </CardContent>
         </Card>
@@ -198,13 +197,13 @@ const EarlyCaseAssessment = () => {
                   Precise Identification
                 </h3>
                 <p className="text-gray-300">
-                  Kentron's advanced search capabilities allow users to quickly
-                  pinpoint relevant data across vast data sources such as Slack,
-                  JIRA, Confluence, Teams, etc. In addition, Kentron's
-                  auto-classification feature can identify and label over 150
-                  data into predefined categories such as personal identifiable
-                  information (PII), credit card number, name, age, passport,
-                  etc.
+                  Kentron&apos;s advanced search capabilities allow users to
+                  quickly pinpoint relevant data across vast data sources such
+                  as Slack, JIRA, Confluence, Teams, etc. In addition,
+                  Kentron&apos;s auto-classification feature can identify and
+                  label over 150 data into predefined categories such as
+                  personal identifiable information (PII), credit card number,
+                  name, age, passport, etc.
                 </p>
               </div>
             </div>
@@ -234,7 +233,7 @@ const EarlyCaseAssessment = () => {
                   Deduplication, threading, and filtering by metadata (e.g.,
                   date ranges, participants, and file types) significantly
                   reduce data volume, lowering review costs. By leveraging
-                  Kentron's robust data classification feature, you can
+                  Kentron&apos;s robust data classification feature, you can
                   transform chaotic datasets into organized, actionable
                   insights, streamlining the litigation and compliance
                   processes. This process enhances efficiency and ensures that

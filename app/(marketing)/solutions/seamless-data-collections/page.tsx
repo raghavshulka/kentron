@@ -174,7 +174,7 @@ const SeamlessDataCollection = () => {
                   Multi-Platform Integration
                 </h3>
                 <p className="text-gray-300">
-                  Kentron's multi-platform integration gathers data from various
+                  Kentron &apos;s multi-platform integration gathers data from various
                   sources, such as Slack, Microsoft Teams, JIRA, Confluence,
                   Google Drive, Gmail, and more, providing a unified solution to
                   capture all relevant data regardless of its source.

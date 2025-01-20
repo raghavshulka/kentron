@@ -136,7 +136,7 @@ const ProactiveDataMonitoring = () => {
                 </strong>
                 Proactive monitoring can detect unusual data access patterns and
                 alert security teams before data leaks occur. Early detection
-                can prevent significant damage, whether it's an external breach
+                can prevent significant damage, whether it &apos;s an external breach
                 attempt or an insider threat.
               </div>
             </li>
