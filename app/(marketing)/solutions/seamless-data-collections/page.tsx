@@ -27,13 +27,13 @@ const SeamlessDataCollection = () => {
         </ol>
         <h2 className="text-2xl font-semibold mt-8">Kentron for Seamless Data Collection</h2>
         <p>
-          <strong>Multi-Platform Integration:</strong> Kentron's multi-platform integration gathers data from various sources, such as Slack, Microsoft Teams, JIRA, Confluence, Google Drive, Gmail, and more, providing a unified solution to capture all relevant data regardless of its source.
+          <strong>Multi-Platform Integration:</strong> Kentron&apos;s multi-platform integration gathers data from various sources, such as Slack, Microsoft Teams, JIRA, Confluence, Google Drive, Gmail, and more, providing a unified solution to capture all relevant data regardless of its source.
         </p>
         <p>
           <strong>On-demand Selective and Targeted Collection:</strong> On-demand data collection enables legal teams to meet the requirements of Federal Rules of Civil Procedure Rule 26(f), which mandates submitting a written report to the court within 14 days outlining the proposed discovery plan. By focusing solely on necessary data, targeted collection minimizes volume and eliminates irrelevant information.
         </p>
         <p>
-          <strong>Security, Audit Trails, and Reporting:</strong> Kentron is designed with a "Security First" approach, ensuring robust data protection. We utilize encryption for data both in transit and at rest and implement role-based access controls to restrict access to authorized personnel only. Additionally, detailed logs of all collection activities are maintained, ensuring full transparency and defensibility.
+          <strong>Security, Audit Trails, and Reporting:</strong> Kentron is designed with a &quot;Security First&quot; approach, ensuring robust data protection. We utilize encryption for data both in transit and at rest and implement role-based access controls to restrict access to authorized personnel only. Additionally, detailed logs of all collection activities are maintained, ensuring full transparency and defensibility.
         </p>
       </div>
     </div>
