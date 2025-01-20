@@ -38,7 +38,7 @@ const ProactiveDataMonitoring = () => {
             sensitive data resides and how it is used.
           </li>
           <li>
-            <strong>Preventing Data Leaks and Insider Threats:</strong>{" "}
+            <strong>Preventing Data Leaks and Insider Threats:</strong>
             Proactive monitoring can detect unusual data access patterns and
             alert security teams before data leaks occur. Early detection can
             prevent significant damage, whether it's an external breach attempt
@@ -55,39 +55,26 @@ const ProactiveDataMonitoring = () => {
         <h2 className="text-2xl font-semibold mt-8">
           Kentron for Proactive Data Monitoring
         </h2>
-        <p className="   pt-4 ">
-          <strong className=" text-xl ">
-            Keyword and Sentiment Monitoring
-          </strong>
-          <br />
-          <strong> What It Does:</strong>
+        <p>
+          <strong>Keyword and Sentiment Monitoring:</strong> What It Does:
           Continuously monitor data for predefined keywords, phrases, or
-          sentiment shifts across platforms.
-          <br />
-          <strong> Benefit:</strong> Alerts teams to emerging issues (e.g.,
-          negative sentiment regarding a policy) that may require legal or
-          compliance attention.
+          sentiment shifts across platforms. Benefit: Alerts teams to emerging
+          issues (e.g., negative sentiment regarding a policy) that may require
+          legal or compliance attention.
         </p>
-        <p className="   pt-4 ">
-          <strong className=" text-xl ">Preemptive Legal Hold Alerts</strong>
-          <br />
-          <strong> What It Does:</strong>
+        <p>
+          <strong>Preemptive Legal Hold Alerts:</strong> What It Does:
           Automatically scans organizational data for potential triggers (e.g.,
           internal investigations, regulatory reviews) and recommends placing
-          relevant data sources under legal hold. <br />
-          <strong> Benefit:</strong> Reduces the risk of data spoliation and
-          ensures compliance with preservation obligations proactively.
+          relevant data sources under legal hold. Benefit: Reduces the risk of
+          data spoliation and ensures compliance with preservation obligations
+          proactively.
         </p>
-        <p className="   pt-4 ">
-          <strong className=" text-xl ">
-            Automated Data Source Monitoring
-          </strong>
-          <br />
-          <strong> What It Does:</strong> Continuously monitor connected data
-          sources (e.g., Slack, Google Workspace, JIRA) for new or updated
-          information relevant to ongoing or anticipated cases.
-          <br />
-          <strong> Benefit:</strong> Enables early identification of relevant
+        <p>
+          <strong>Automated Data Source Monitoring:</strong> What It Does:
+          Continuously monitor connected data sources (e.g., Slack, Google
+          Workspace, JIRA) for new or updated information relevant to ongoing or
+          anticipated cases. Benefit: Enables early identification of relevant
           data and reduces the risk of missing critical updates during
           litigation.
         </p>

@@ -8,20 +8,20 @@ const EarlyCaseAssessment = () => {
           Early Case Assessment
         </h1>
         <p>
-          In legal practice, whether you're representing a client in a
+          In legal practice, whether you&apos;re representing a client in a
           high-stakes litigation or managing a routine legal matter, the
           importance of early case assessment (ECA) cannot be overstated. Early
           case assessment refers to evaluating the facts, evidence, and legal
           issues of a case as soon as it arises, often before formal litigation
           or extensive legal proceedings commence. This proactive approach
           offers a range of benefits that can significantly impact the outcome
-          of a case. Here's why early case assessment is a game-changer in legal
+          of a case. Here&apos;s why early case assessment is a game-changer in legal
           practice:
         </p>
         <ol className="list-decimal list-inside space-y-4 mt-4">
           <li>
             <strong>Informed Decision-Making:</strong> Early case assessment
-            provides a comprehensive understanding of a case's strengths and
+            provides a comprehensive understanding of a case&apos;s strengths and
             weaknesses. By evaluating evidence, assessing legal claims, and
             identifying potential risks early on, attorneys can make more
             informed decisions about how to proceed. This insight allows for
@@ -39,7 +39,7 @@ const EarlyCaseAssessment = () => {
           <li>
             <strong>Risk Mitigation:</strong> Identifying potential risks early
             in the process allows legal teams to address them proactively.
-            Whether it's uncovering weaknesses in evidence or anticipating
+            Whether it&apos;s uncovering weaknesses in evidence or anticipating
             challenges from opposing counsel, early case assessment helps in
             developing strategies to mitigate these risks. This foresight can
             prevent surprises and improve overall case outcomes.
@@ -47,7 +47,7 @@ const EarlyCaseAssessment = () => {
           <li>
             <strong>Strategic Advantage:</strong> Having a detailed early case
             assessment provides a strategic advantage in litigation. It allows
-            legal teams to anticipate the opposing party's arguments, prepare
+            legal teams to anticipate the opposing party&apos;s arguments, prepare
             counterarguments, and adjust their strategies accordingly. This
             preparedness can be crucial in high-stakes cases where every
             advantage counts.
@@ -63,27 +63,27 @@ const EarlyCaseAssessment = () => {
         </ol>
         <h2 className="text-2xl font-semibold mt-8">Conclusion</h2>
         <p>
-          Early case assessment is more than just a preliminary step; it's a
+          Early case assessment is more than just a preliminary step; it&apos;s a
           strategic advantage that can influence every aspect of legal practice.
           The benefits of starting early are substantial from informed
           decision-making and cost efficiency to improved case management and
           client satisfaction. For legal professionals committed to achieving
           the best outcomes for their clients, incorporating early case
-          assessment into their practice is not just recommended—it's essential.
+          assessment into their practice is not just recommended—it&apos;s essential.
         </p>
         <h2 className="text-2xl font-semibold mt-8">
           Kentron for Early Case Assessment
         </h2>
-        <p className="   pt-4 ">
-          <strong className=" text-xl ">Precise Identification:</strong> Kentron's advanced search
+        <p>
+          <strong>Precise Identification:</strong> Kentron&apos;s advanced search
           capabilities allow users to quickly pinpoint relevant data across vast
           data sources such as Slack, JIRA, Confluence, Teams, etc. In addition,
-          Kentron's auto-classification feature can identify and label over 150
+          Kentron&apos;s auto-classification feature can identify and label over 150
           data into predefined categories such as personal identifiable
           information (PII), credit card number, name, age, passport, etc.
         </p>
-        <p className=" py-4">
-          <strong className=" text-xl ">AI-Powered Insights:</strong> Incorporating natural language
+        <p>
+          <strong>AI-Powered Insights:</strong> Incorporating natural language
           processing (NLP) and machine learning helps surface patterns, key
           custodians, and communication trends without manually sifting through
           data. Kentron automatically also identifies and categorizes over 100
@@ -91,12 +91,15 @@ const EarlyCaseAssessment = () => {
           policies, etc.
         </p>
         <p>
-          <strong className=" text-xl ">Pre-Review Culling:</strong> Deduplication, threading, and
+          <strong>Pre-Review Culling:</strong> Deduplication, threading, and
           filtering by metadata (e.g., date ranges, participants, and file
-          types) significantly reduce data volume, lowering review costs. By
-          leveraging Kentron's robust data classification feature, you can
+          types) significantly reduce data volume, lowering review costs.
+          <br />
+          <strong>What It Does:</strong> By leveraging Kentron&apos;s robust data classification feature, you can
           transform chaotic datasets into organized, actionable insights,
           streamlining the litigation and compliance processes.
+          <br />
+          <strong>Benefit:</strong> This process enhances efficiency and ensures that legal teams can focus on critical tasks without being bogged down by irrelevant data.
         </p>
       </div>
     </div>
