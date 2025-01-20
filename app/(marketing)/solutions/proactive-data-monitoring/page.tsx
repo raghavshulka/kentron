@@ -55,26 +55,26 @@ const ProactiveDataMonitoring = () => {
         <h2 className="text-2xl font-semibold mt-8">
           Kentron for Proactive Data Monitoring
         </h2>
-        <p>
-          <strong>Keyword and Sentiment Monitoring:</strong> What It Does:
+        <p className=" mt-2">
+          <strong className=" text-xl">Keyword and Sentiment Monitoring:</strong>  <br/> <strong> What It Does:</strong>
           Continuously monitor data for predefined keywords, phrases, or
-          sentiment shifts across platforms. Benefit: Alerts teams to emerging
+          sentiment shifts across platforms.  <br/> <strong> Benifit:</strong> Alerts teams to emerging
           issues (e.g., negative sentiment regarding a policy) that may require
           legal or compliance attention.
         </p>
-        <p>
-          <strong>Preemptive Legal Hold Alerts:</strong> What It Does:
+        <p className=" py-4">
+          <strong className=" text-xl">Preemptive Legal Hold Alerts:</strong>  <br/> <strong> What It Does:</strong>
           Automatically scans organizational data for potential triggers (e.g.,
           internal investigations, regulatory reviews) and recommends placing
-          relevant data sources under legal hold. Benefit: Reduces the risk of
+          relevant data sources under legal hold. <br/> <strong> Benifit:</strong> Reduces the risk of
           data spoliation and ensures compliance with preservation obligations
           proactively.
         </p>
         <p>
-          <strong>Automated Data Source Monitoring:</strong> What It Does:
+          <strong className=" text-xl">Automated Data Source Monitoring:</strong> <br/> <strong> What It Does:</strong>
           Continuously monitor connected data sources (e.g., Slack, Google
           Workspace, JIRA) for new or updated information relevant to ongoing or
-          anticipated cases. Benefit: Enables early identification of relevant
+          anticipated cases.  <br/> <strong> Benefit:</strong> Enables early identification of relevant
           data and reduces the risk of missing critical updates during
           litigation.
         </p>

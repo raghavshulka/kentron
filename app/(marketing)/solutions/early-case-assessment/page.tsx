@@ -15,14 +15,14 @@ const EarlyCaseAssessment = () => {
           issues of a case as soon as it arises, often before formal litigation
           or extensive legal proceedings commence. This proactive approach
           offers a range of benefits that can significantly impact the outcome
-          of a case. Here&apos;s why early case assessment is a game-changer in legal
-          practice:
+          of a case. Here&apos;s why early case assessment is a game-changer in
+          legal practice:
         </p>
         <ol className="list-decimal list-inside space-y-4 mt-4">
           <li>
             <strong>Informed Decision-Making:</strong> Early case assessment
-            provides a comprehensive understanding of a case&apos;s strengths and
-            weaknesses. By evaluating evidence, assessing legal claims, and
+            provides a comprehensive understanding of a case&apos;s strengths
+            and weaknesses. By evaluating evidence, assessing legal claims, and
             identifying potential risks early on, attorneys can make more
             informed decisions about how to proceed. This insight allows for
             strategic planning and helps set realistic expectations for clients.
@@ -47,9 +47,9 @@ const EarlyCaseAssessment = () => {
           <li>
             <strong>Strategic Advantage:</strong> Having a detailed early case
             assessment provides a strategic advantage in litigation. It allows
-            legal teams to anticipate the opposing party&apos;s arguments, prepare
-            counterarguments, and adjust their strategies accordingly. This
-            preparedness can be crucial in high-stakes cases where every
+            legal teams to anticipate the opposing party&apos;s arguments,
+            prepare counterarguments, and adjust their strategies accordingly.
+            This preparedness can be crucial in high-stakes cases where every
             advantage counts.
           </li>
           <li>
@@ -63,26 +63,28 @@ const EarlyCaseAssessment = () => {
         </ol>
         <h2 className="text-2xl font-semibold mt-8">Conclusion</h2>
         <p>
-          Early case assessment is more than just a preliminary step; it&apos;s a
-          strategic advantage that can influence every aspect of legal practice.
-          The benefits of starting early are substantial from informed
+          Early case assessment is more than just a preliminary step; it&apos;s
+          a strategic advantage that can influence every aspect of legal
+          practice. The benefits of starting early are substantial from informed
           decision-making and cost efficiency to improved case management and
           client satisfaction. For legal professionals committed to achieving
           the best outcomes for their clients, incorporating early case
-          assessment into their practice is not just recommended—it&apos;s essential.
+          assessment into their practice is not just recommended—it&apos;s
+          essential.
         </p>
         <h2 className="text-2xl font-semibold mt-8">
           Kentron for Early Case Assessment
         </h2>
-        <p>
-          <strong>Precise Identification:</strong> Kentron&apos;s advanced search
-          capabilities allow users to quickly pinpoint relevant data across vast
-          data sources such as Slack, JIRA, Confluence, Teams, etc. In addition,
-          Kentron&apos;s auto-classification feature can identify and label over 150
-          data into predefined categories such as personal identifiable
-          information (PII), credit card number, name, age, passport, etc.
+        <p className=" pt-2">
+          <strong>Precise Identification:</strong> Kentron&apos;s advanced
+          search capabilities allow users to quickly pinpoint relevant data
+          across vast data sources such as Slack, JIRA, Confluence, Teams, etc.
+          In addition, Kentron&apos;s auto-classification feature can identify
+          and label over 150 data into predefined categories such as personal
+          identifiable information (PII), credit card number, name, age,
+          passport, etc.
         </p>
-        <p>
+        <p className=" py-4">
           <strong>AI-Powered Insights:</strong> Incorporating natural language
           processing (NLP) and machine learning helps surface patterns, key
           custodians, and communication trends without manually sifting through
@@ -93,13 +95,12 @@ const EarlyCaseAssessment = () => {
         <p>
           <strong>Pre-Review Culling:</strong> Deduplication, threading, and
           filtering by metadata (e.g., date ranges, participants, and file
-          types) significantly reduce data volume, lowering review costs.
-          <br />
-          <strong>What It Does:</strong> By leveraging Kentron&apos;s robust data classification feature, you can
+          types) significantly reduce data volume, lowering review costs. By
+          leveraging Kentron&apos;s robust data classification feature, you can
           transform chaotic datasets into organized, actionable insights,
-          streamlining the litigation and compliance processes.
-          <br />
-          <strong>Benefit:</strong> This process enhances efficiency and ensures that legal teams can focus on critical tasks without being bogged down by irrelevant data.
+          streamlining the litigation and compliance processes. This process
+          enhances efficiency and ensures that legal teams can focus on critical
+          tasks without being bogged down by irrelevant data.
         </p>
       </div>
     </div>
