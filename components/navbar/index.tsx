@@ -32,31 +32,34 @@ const menuItems = [
         href: "/product/predictive-compliance",
       },
     ] as MenuItem[],
-    useCases: [
-      {
-        title: "People Ops",
-        description: "Activate your teams potential and drive company growth.",
-        href: "/use-cases/people-ops",
-      },
-      {
-        title: "Work Hub",
-        description: "Tailor Unleash to match your company portal.",
-        href: "/use-cases/work-hub",
-      },
-      {
-        title: "Intranet Search Engine",
-        description: "Modernize your intranet with AI-powered search.",
-        href: "/use-cases/intranet-search",
-      },
-    ],
+    // useCases: [
+    //   // Removed use cases from PRODUCT
+    // ],
   },
   {
-    title: "SOLUTION",
+    title: "SOLUTIONS",
     items: [
       { title: "Corporations", href: "/solutions/corporations" },
       { title: "Legal Service Provider", href: "/solutions/legal-service" },
       { title: "Law Firms", href: "/solutions/law-firms" },
       { title: "Industries", href: "/solutions/industries" },
+    ],
+    useCases: [
+      {
+        title: "Early Case Assessment",
+        // description: "Assess cases early to streamline processes.",
+        href: "/solutions/early-case-assessment",
+      },
+      {
+        title: "Seamless Data Collections",
+        // description: "Collect data effortlessly across platforms.",
+        href: "/solutions/seamless-data-collections",
+      },
+      {
+        title: "Proactive Data Monitoring",
+        // description: "Monitor data proactively to ensure compliance.",
+        href: "/solutions/proactive-data-monitoring",
+      },
     ],
   },
   {
@@ -161,7 +164,7 @@ export function NavBar() {
                               key={item.title}
                               href={item.href}
                               title={item.title}
-                              target={item?.target}
+                              target={(item as MenuItem).target}
                             />
                           ))}
                         </ul>
@@ -177,7 +180,7 @@ export function NavBar() {
                                 key={useCase.title}
                                 href={useCase.href}
                                 title={useCase.title}
-                                description={useCase.description}
+                                // description={useCase.description}
                               />
                             ))}
                           </ul>
@@ -204,7 +207,10 @@ export function NavBar() {
           <div className="h-full overflow-y-auto">
             <nav className="relative w-full px-6 py-0">
               {menuItems.map((section) => (
-                <div key={section.title} className="py-4 border-b border-white/10">
+                <div
+                  key={section.title}
+                  className="py-4 border-b border-white/10"
+                >
                   <h2 className="text-white/70 text-sm font-medium tracking-wider mb-4">
                     {section.title}
                   </h2>
@@ -215,7 +221,7 @@ export function NavBar() {
                           href={item.href}
                           onClick={() => setIsMenuOpen(false)}
                           className="text-white/90 hover:text-white text-base font-normal block transition-colors"
-                          target={item.target}
+                          target={(item as MenuItem).target}
                         >
                           {item.title}
                         </Link>
@@ -235,9 +241,11 @@ export function NavBar() {
                               onClick={() => setIsMenuOpen(false)}
                               className="text-white/90 hover:text-white block transition-colors"
                             >
-                              <div className="text-base font-normal">{useCase.title}</div>
+                              <div className="text-base font-normal">
+                                {useCase.title}
+                              </div>
                               <p className="text-sm text-white/70 mt-1">
-                                {useCase.description}
+                                {/* {useCase.description} */}
                               </p>
                             </Link>
                           </li>
