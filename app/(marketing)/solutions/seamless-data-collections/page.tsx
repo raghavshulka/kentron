@@ -89,7 +89,7 @@ const SeamlessDataCollection = () => {
               <div>
                 <strong className="text-blue-400 text-lg">
                   Comprehensive Data Coverage:
-                </strong>{" "}
+                </strong>
                 Collecting data from diverse sources, including email, chat
                 platforms (e.g., Slack, Microsoft Teams), cloud storage (e.g.,
                 Google Drive, SharePoint), enterprise tools (e.g., JIRA,
@@ -134,7 +134,7 @@ const SeamlessDataCollection = () => {
               <div>
                 <strong className="text-blue-400 text-lg">
                   Targeted Collection with scalability:
-                </strong>{" "}
+                </strong>
                 Allows precise filtering by custodian, keyword, date range, or
                 file type to collect only relevant data. Minimizes the volume of
                 unnecessary data, reducing review costs and time. A scalable
@@ -149,7 +149,7 @@ const SeamlessDataCollection = () => {
               <div>
                 <strong className="text-blue-400 text-lg">
                   Regulatory Compliance:
-                </strong>{" "}
+                </strong>
                 Data collection needs to adhere to data privacy laws and
                 compliance standards (e.g., GDPR, CCPA, HIPAA) by applying rules
                 during collection, such as excluding sensitive or irrelevant
@@ -204,7 +204,7 @@ const SeamlessDataCollection = () => {
                   Security, Audit Trails, and Reporting
                 </h3>
                 <p className="text-gray-300">
-                  Kentron is designed with a "Security First" approach, ensuring
+                  Kentron is designed with a Security First approach, ensuring
                   robust data protection. We utilize encryption for data both in
                   transit and at rest and implement role-based access controls
                   to restrict access to authorized personnel only. Additionally,
