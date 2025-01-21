@@ -187,7 +187,7 @@ const ProactiveDataMonitoring = () => {
             <div className="flex items-start">
               <Shield className="mr-4 text-purple-400 flex-shrink-0 mt-1" />
               <div>
-                <h3 className="text-xl font-semibold text-purple-400 mb-2">
+                <h3 className="text-xl font-semibold text-blue-400 mb-2">
                   Preemptive Legal Hold Alerts
                 </h3>
                 <p className="text-gray-300">
@@ -206,7 +206,7 @@ const ProactiveDataMonitoring = () => {
             <div className="flex items-start">
               <Zap className="mr-4 text-yellow-400 flex-shrink-0 mt-1" />
               <div>
-                <h3 className="text-xl font-semibold text-yellow-400 mb-2">
+                <h3 className="text-xl font-semibold text-blue-400 mb-2">
                   Automated Data Source Monitoring
                 </h3>
                 <p className="text-gray-300">

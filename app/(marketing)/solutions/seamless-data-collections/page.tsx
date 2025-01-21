@@ -184,7 +184,7 @@ const SeamlessDataCollection = () => {
             <div className="flex items-start">
               <Filter className="mr-4 text-purple-400 flex-shrink-0 mt-1" />
               <div>
-                <h3 className="text-xl font-semibold text-purple-400 mb-2">
+                <h3 className="text-xl font-semibold text-blue-400 mb-2">
                   On-demand Selective and Targeted Collection
                 </h3>
                 <p className="text-gray-300">
@@ -200,7 +200,7 @@ const SeamlessDataCollection = () => {
             <div className="flex items-start">
               <Lock className="mr-4 text-yellow-400 flex-shrink-0 mt-1" />
               <div>
-                <h3 className="text-xl font-semibold text-yellow-400 mb-2">
+                <h3 className="text-xl font-semibold text-blue-400 mb-2">
                   Security, Audit Trails, and Reporting
                 </h3>
                 <p className="text-gray-300">

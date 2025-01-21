@@ -210,7 +210,7 @@ const EarlyCaseAssessment = () => {
             <div className="flex items-start">
               <Brain className="mr-4 text-purple-400 flex-shrink-0 mt-1" />
               <div>
-                <h3 className="text-xl font-semibold text-purple-400 mb-2">
+                <h3 className="text-xl font-semibold text-blue-400 mb-2">
                   AI-Powered Insights
                 </h3>
                 <p className="text-gray-300">
@@ -226,7 +226,7 @@ const EarlyCaseAssessment = () => {
             <div className="flex items-start">
               <Zap className="mr-4 text-yellow-400 flex-shrink-0 mt-1" />
               <div>
-                <h3 className="text-xl font-semibold text-yellow-400 mb-2">
+                <h3 className="text-xl font-semibold text-blue-400 mb-2">
                   Pre-Review Culling
                 </h3>
                 <p className="text-gray-300">
