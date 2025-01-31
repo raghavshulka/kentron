@@ -56,7 +56,7 @@ const EducationAdvancedEDiscovery = () => {
       content:
         "Educational institutions must comply with regulations such as <strong>FERPA</strong> (Family Educational Rights and Privacy Act), <strong>GDPR</strong> (General Data Protection Regulation), and state privacy laws. Kentron’s eDiscovery platform helps institutions efficiently locate and manage student records, faculty communications, and other sensitive information in response to legal or regulatory requests.",
       example:
-        "A university receives a <strong>FERPA</strong> request from a parent seeking access to their child&aposs educational records. An eDiscovery solution enables administrators to quickly search and retrieve relevant documents while ensuring confidential information is protected.",
+        "A university receives a <strong>FERPA</strong> request from a parent seeking access to their child educational records. An eDiscovery solution enables administrators to quickly search and retrieve relevant documents while ensuring confidential information is protected.",
       conclusion:
         "As a result, enables faster compliance with legal requests without manually sorting through vast amounts of data. Reduces legal risks associated with non-compliance.",
     },
