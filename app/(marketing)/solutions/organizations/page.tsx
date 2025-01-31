@@ -113,7 +113,7 @@ const AdvancedDigitalCommunicationsGovernance = () => {
               capabilities.
             </p>
             <p className="text-xl text-gray-300 leading-relaxed">
-              In today's digital-first world, organizations generate and store
+              In today&aposs digital-first world, organizations generate and store
               massive amounts of data across various platforms, including
               emails, collaboration tools, cloud storage, and internal
               databases. Managing, retrieving, and protecting this data is
@@ -121,7 +121,7 @@ const AdvancedDigitalCommunicationsGovernance = () => {
               regulations, internal investigations, and cybersecurity threats.
             </p>
             <p className="text-xl text-gray-300 leading-relaxed">
-              <strong >Kentron's</strong> advanced
+              <strong >Kentron&aposs</strong> advanced
               eDiscovery and Digital Communications Governance solution helps
               organizations search, collect, analyze, and manage electronic data
               efficiently, ensuring compliance, reducing legal risks, and
@@ -149,10 +149,10 @@ const AdvancedDigitalCommunicationsGovernance = () => {
           <CardContent className="p-8">
             <div className="text-gray-200 space-y-6">
               <p className="text-xl leading-relaxed">
-                In today's data-driven environment, organizations must be
+                In today&aposs data-driven environment, organizations must be
                 prepared to handle compliance audits, legal disputes, security
                 incidents, and public records requests efficiently.{" "}
-                <strong className="text-gray-300">Kentron's AI driven</strong>{" "}
+                <strong className="text-gray-300">Kentron&aposs AI driven</strong>{" "}
                 solution empowers businesses to reduce risk, enhance compliance,
                 and improve operational efficiency.
               </p>
