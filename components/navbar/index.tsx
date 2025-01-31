@@ -39,10 +39,9 @@ const menuItems = [
   {
     title: "SOLUTIONS",
     items: [
-      { title: "Corporations", href: "/solutions/corporations" },
-      { title: "Legal Service Provider", href: "/solutions/legal-service" },
+      { title: "Organizations", href: "/solutions/organizations" },
       { title: "Law Firms", href: "/solutions/law-firms" },
-      { title: "Industries", href: "/solutions/industries" },
+      { title: "Educations", href: "/solutions/educations" },      
     ],
     useCases: [
       {

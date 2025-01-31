@@ -29,8 +29,7 @@ const ProactiveDataMonitoring = () => {
           <Card className="bg-gray-900 border-gray-800">
             <CardHeader>
               <CardTitle className="text-2xl font-semibold text-blue-400 flex items-center">
-                <Shield className="mr-2" />             Proactive Data Monitoring
-
+                <Shield className="mr-2" /> Proactive Data Monitoring
               </CardTitle>
             </CardHeader>
             <CardContent className="text-gray-300">
@@ -136,8 +135,8 @@ const ProactiveDataMonitoring = () => {
                 </strong>{" "}
                 Proactive monitoring can detect unusual data access patterns and
                 alert security teams before data leaks occur. Early detection
-                can prevent significant damage, whether it &apos;s an external breach
-                attempt or an insider threat.
+                can prevent significant damage, whether it &apos;s an external
+                breach attempt or an insider threat.
               </div>
             </li>
             <li className="flex items-start">
@@ -173,14 +172,10 @@ const ProactiveDataMonitoring = () => {
                   Keyword and Sentiment Monitoring
                 </h3>
                 <p className="text-gray-300">
-                  <strong>What It Does:</strong> Continuously monitor data for
-                  predefined keywords, phrases, or sentiment shifts across
-                  platforms.
-                </p>
-                <p className="text-gray-300">
-                  <strong>Benefit:</strong> Alerts teams to emerging issues
-                  (e.g., negative sentiment regarding a policy) that may require
-                  legal or compliance attention.
+                  Continuously monitor data for predefined keywords, phrases, or
+                  sentiment shifts across platforms. Alert teams to emerging
+                  issues (e.g., negative sentiment regarding a policy) that may
+                  require legal or compliance attention.
                 </p>
               </div>
             </div>
@@ -191,15 +186,11 @@ const ProactiveDataMonitoring = () => {
                   Preemptive Legal Hold Alerts
                 </h3>
                 <p className="text-gray-300">
-                  <strong>What It Does:</strong> Automatically scans
-                  organizational data for potential triggers (e.g., internal
-                  investigations, regulatory reviews) and recommends placing
-                  relevant data sources under legal hold.
-                </p>
-                <p className="text-gray-300">
-                  <strong>Benefit:</strong> Reduces the risk of data spoliation
-                  and ensures compliance with preservation obligations
-                  proactively.
+                  Automatically scans organizational data for potential triggers
+                  (e.g., internal investigations, regulatory reviews) and
+                  recommends placing relevant data sources under legal hold.
+                  This reduces data spoliation risk and proactively ensures
+                  compliance with preservation obligations.
                 </p>
               </div>
             </div>
@@ -210,14 +201,11 @@ const ProactiveDataMonitoring = () => {
                   Automated Data Source Monitoring
                 </h3>
                 <p className="text-gray-300">
-                  <strong>What It Does:</strong> Continuously monitor connected
-                  data sources (e.g., Slack, Google Workspace, JIRA) for new or
-                  updated information relevant to ongoing or anticipated cases.
-                </p>
-                <p className="text-gray-300">
-                  <strong>Benefit:</strong> Enables early identification of
-                  relevant data and reduces the risk of missing critical updates
-                  during litigation.
+                  Continuously monitor connected data sources (e.g., Slack,
+                  Google Workspace, JIRA) for new or updated information
+                  relevant to ongoing or anticipated cases. Enables early
+                  identification of relevant data and reduces the risk of
+                  missing critical updates during litigation.
                 </p>
               </div>
             </div>
