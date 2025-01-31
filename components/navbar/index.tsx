@@ -70,7 +70,7 @@ const menuItems = [
         target: "_blank",
       },
       {
-        title: "Connectors",
+        title: "Integrations",
         href: "https://docs.kentron.ai/connector",
         target: "_blank",
       },
