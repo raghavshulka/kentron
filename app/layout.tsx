@@ -10,7 +10,7 @@ import GoogleAnalytics from '@/components/GoogleAnalytics';
 //   },
 //   description: 'KENTRON is an Enterprise Legal Intelligence Platform that streamlines data management, ensures compliance, and provides advanced security features for legal and compliance purposes.',
 //   keywords: [
-//     'Legal Intelligence',
+//     'Legal Intelligence' ,
 //     'Enterprise Compliance',
 //     'Data Security',
 //     'Legal Technology',

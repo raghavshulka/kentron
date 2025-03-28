@@ -8,7 +8,7 @@
 //   { path: '/services/mobile-development', label: 'Mobile Development' },
 //   { path: '/services/ui-ux-design', label: 'UI/UX Design' },
 //   { path: '/services/digital-marketing', label: 'Digital Marketing' },
-//   { path: '/portfolio', label: 'Portfolio' },
+//   { path: '/portfolio', label: 'Portfolio' } ,
 //   { path: '/blog', label: 'Blog' },
 //   { path: '/careers', label: 'Careers' },
 //   { path: '/contact', label: 'Contact Us' },
