@@ -11,8 +11,33 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Link } from "next-view-transitions";
 import { GridLineHorizontal, GridLineVertical } from "./grid-lines";
-
+import React from "react";
+import { ContainerScroll } from "@/components/ui/container-scroll-animation";
+import banner from "@/public/banner.png"
+import { FaBalanceScale } from "react-icons/fa";
 export const Hero = () => {
+
+
+ function HeroScrollDemo() {
+  return (
+    <div className="flex flex-col overflow-hidden mt-0">
+      <ContainerScroll
+
+      >
+        <Image
+          src={banner}
+          alt="hero"
+          height={720}
+          width={1400}
+          className="mx-auto rounded-2xl object-cover h-full "
+          draggable={false}
+        />
+      </ContainerScroll>
+    </div>
+  );
+}
+
+
   const openFormInNewTab = () => {
     window.open(
       "https://docs.google.com/forms/d/e/1FAIpQLScJoTxA6TIeY1JwGhb8xwZJQxAAeM_bEsHQfF66l1_Wgcn0Pg/viewform",
@@ -20,9 +45,13 @@ export const Hero = () => {
     );
   };
 
+  const learnMore = () => {
+    window.open("/learn-more", "_self");
+  };
+
   return (
     <>
-      <GridLineHorizontal />
+      {/* <GridLineHorizontal /> */}
       <video
         className="absolute w-full h-screen object-cover"
         src="/video.mp4"
@@ -36,17 +65,17 @@ export const Hero = () => {
             "linear-gradient(to bottom, black 80%, transparent 100%)",
         }}
       />
-      <GridLineVertical className="absolute h-full blur-[1px] right-[12px] md:right-[41px] opacity-70 md:opacity-80" />
-      <GridLineVertical className="absolute h-full blur-[1px] left-[12px] md:left-[41px] opacity-70 md:opacity-80" />
-      <div className="flex flex-col min-h-screen pt-20 md:pt-[120px] relative overflow-hidden px-4 md:px-0">
+      {/* <GridLineVertical className="absolute h-full blur-[1px] right-[12px] md:right-[41px] opacity-70 md:opacity-80" />
+      <GridLineVertical className="absolute h-full blur-[1px] left-[12px] md:left-[41px] opacity-70 md:opacity-80" /> */}
+      <div className="flex flex-col items-center justify-center mt-[80px] relative ">
         <motion.h1
           initial={{ y: 40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ ease: "easeOut", duration: 0.5 }}
-          className="text-[44px] mt-[100px] font-bold leading-[52.51px] max-w-6xl text-center md:text-left md:mx-[20px] lg:mx-[80px] md:text-[72px] md:leading-[85px] relative z-10"
+          className=" text-[34px] w-[415px] h-[147px] md:text-[56px] font-semibold leading-snug text-center text-white relative  z-10"
         >
-          <Balancer className="font-sf-pro text-white tracking-[0.02em]">
-            AI-driven eDiscovery & Compliance
+          <Balancer className="font-sf-pro ">
+            Lightning-Fast AI-Driven <br /> eDiscovery & <br /> Compliance
           </Balancer>
         </motion.h1>
 
@@ -54,10 +83,11 @@ export const Hero = () => {
           initial={{ y: 40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ ease: "easeOut", duration: 0.5, delay: 0.2 }}
-          className="font-sf-pro text-white text-center text-[18px] leading-[21px] mt-6 font-medium md:text-left md:text-[32px] md:leading-[38px] tracking-[0.02em] md:mx-8 lg:mx-[80px]"
+          className="text-center w-[279px] h-[56px] text-white text-[20px] md:text-[18px] leading-[28px] mt-4 font-normal relative z-10 "
         >
           <Balancer>
-            Reduce legal & compliance risk by proactive monitoring
+            Reduce legal & compliance risk 
+            by proactive monitoring.
           </Balancer>
         </motion.p>
 
@@ -65,17 +95,50 @@ export const Hero = () => {
           initial={{ y: 80, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ ease: "easeOut", duration: 0.5, delay: 0.4 }}
-          className="flex items-center justify-center md:justify-start mt-6 relative z-10 md:ml-8 lg:ml-[80px]"
+          className="flex flex-col items-center mt-[8px] relative z-10"
         >
           <Button
             onClick={openFormInNewTab}
-            className="w-[194px] h-[44px] text-white md:w-[238px] md:h-[56px] md:mt-[40px] bg-black rounded-sm flex items-center justify-center"
+            className="w-[202px] h-[40px] mb-4 text-white bg-black rounded-md flex items-center justify-center"
           >
-            <p className="font-sf-pro text-[16px] md:text-[20px]">
+            <p className="font-sf-pro text-[14px] leading-5 font-medium">
               Get Early Access
             </p>
-            <HiArrowRight className="ml-3 stroke-[1px] h-6 w-6 md:h-[24px] md:w-[24px] text-white transition-transform duration-200" />
+            <HiArrowRight className="ml-3 h-5 w-5 text-white" />
           </Button>
+          
+          <Button
+            onClick={learnMore}
+            className="w-[164px] h-[40px] text-[#18181B] bg-white rounded-md flex items-center justify-center"
+          >
+            <p className=" text-[14px] leading-5 font-medium">
+              Learn More
+            </p>
+            <HiArrowRight className="ml-3 h-5 w-5 text-[#18181B]" />
+          </Button>
+
+          <HeroScrollDemo />
+
+           <div className="p-8">
+          <h2 className="text-2xl font-semibold text-center mb-8">Our Partners</h2>
+          <div className="space-y-4 max-w-xl mx-auto">
+            {[
+              "Law Firm A",
+              "Law Firm B",
+              "Law Firm C",
+              "Law Firm D"
+            ].map((firm, index) => (
+              <div
+                key={index}
+                className="flex items-center gap-3 bg-gray-100/80 rounded-full py-3 px-6 hover:bg-gray-200/80 transition-colors"
+              >
+                <FaBalanceScale className="w-5 h-5" />
+            
+                <span className="font-medium">{firm}</span>
+              </div>
+            ))}
+          </div>
+        </div>
         </motion.div>
       </div>
     </>

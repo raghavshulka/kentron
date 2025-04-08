@@ -4,7 +4,7 @@ import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 export function Companies() {
   return (
     <div className="relative mx-[16px] md:mx-[80px]">
-      <div className="text-center md:text-left md:ml-[80px] ml-0">
+      {/* <div className="text-center md:text-left md:ml-[80px] ml-0">
         <h2 className="font-sf-pro text-[29px] leading-[34px] md:leading-[64px] text-[#222222] md:text-[54px] font-bold md:font-[700] mb-[8px]">
           Unified Ingestion Engine
         </h2>
@@ -25,7 +25,7 @@ export function Companies() {
           ))}
         </BentoGrid>
       </div>
-      <div className="relative"></div>
+      <div className="relative"></div> */}
     </div>
   );
 }

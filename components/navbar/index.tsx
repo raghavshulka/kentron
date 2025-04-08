@@ -31,6 +31,10 @@ const menuItems = [
         title: "Predictive Compliance Engine",
         href: "/product/predictive-compliance",
       },
+      {
+        title: "Nebula",
+        href: "/product/nebula",
+      },
     ] as MenuItem[],
     // useCases: [
     //   // Removed use cases from PRODUCT
@@ -85,7 +89,12 @@ const menuItems = [
   },
 ];
 
-export function NavBar() {
+interface NavBarProps {
+  className?: string;
+  textColor?: string;
+}
+
+export function NavBar({ className, textColor }: NavBarProps) {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   // Prevent scrolling when mobile menu is open
@@ -98,7 +107,7 @@ export function NavBar() {
   }, [isMenuOpen]);
 
   return (
-    <nav className="absolute top-0 left-0 w-full z-50 bg-transparent">
+    <nav className={cn("absolute top-0 left-0 w-full z-50 bg-transparent", className)}>
       <div className="mx-4 mt-5 md:mx-8 md:mt-10 lg:mx-10 lg:mt-12 flex items-center justify-between md:pr-[60px] ">
         <Link href="/" className="flex items-center">
           <Image
@@ -113,7 +122,7 @@ export function NavBar() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden relative z-50 w-8 h-8 flex items-center justify-center rounded-lg  transition-colors"
+          className={cn("md:hidden relative z-50 w-8 h-8 flex items-center justify-center rounded-lg  transition-colors", textColor)}
           aria-label="Toggle menu"
         >
           <div className="relative w-4 h-3">
@@ -144,7 +153,7 @@ export function NavBar() {
             <NavigationMenuList className="md:gap-4">
               {menuItems.map((section) => (
                 <NavigationMenuItem key={section.title}>
-                  <NavigationMenuTrigger className="text-white/90 hover:text-white">
+                  <NavigationMenuTrigger className={cn("text-white/90 hover:text-white", textColor)}>
                     {section.title}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
